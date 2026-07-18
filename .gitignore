@@ -1,0 +1,5 @@
+# .gitignore for the reports repo — never publish secrets or bulk state.
+oanda_token.txt
+*.log
+__pycache__/
+*_state/
