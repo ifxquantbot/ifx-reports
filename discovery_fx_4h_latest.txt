@@ -1,8 +1,8 @@
-﻿2026-07-19 02:00:15,199 INFO    run_portfolio                       :: Loaded config: 11 symbols, asset_class=fx, source=oanda
-2026-07-19 02:00:15,235 INFO    oandapyV20.oandapyV20               :: setting up API-client for environment practice
-2026-07-19 02:00:15,235 INFO    run_portfolio                       :: Optimizing EUR_USD with strategies=['ma_crossover', 'donchian_breakout', 'rsi_mean_reverse', 'regime_gated_rsi', 'ts_momentum'] ...
-2026-07-19 02:00:15,238 INFO    oandapyV20.oandapyV20               :: performing request https://api-fxpractice.oanda.com/v3/instruments/EUR_USD/candles
-2026-07-19 02:00:33,853 INFO    run_portfolio                       :: Optimization complete for EUR_USD
+﻿2026-07-20 02:00:04,655 INFO    run_portfolio                       :: Loaded config: 11 symbols, asset_class=fx, source=oanda
+2026-07-20 02:00:04,776 INFO    oandapyV20.oandapyV20               :: setting up API-client for environment practice
+2026-07-20 02:00:04,776 INFO    run_portfolio                       :: Optimizing EUR_USD with strategies=['ma_crossover', 'donchian_breakout', 'rsi_mean_reverse', 'regime_gated_rsi', 'ts_momentum'] ...
+2026-07-20 02:00:04,783 INFO    oandapyV20.oandapyV20               :: performing request https://api-fxpractice.oanda.com/v3/instruments/EUR_USD/candles
+2026-07-20 02:00:22,911 INFO    run_portfolio                       :: Optimization complete for EUR_USD
 ========================================================================
 OPTIMIZATION REPORT ù EUR_USD 4h  (fx)
 Bars analysed: 3000
@@ -59,11 +59,11 @@ OVERALL WINNER: regime_gated_rsi {'rsi_period': 7, 'oversold': 20, 'overbought':
   Deflated SR p: 0.000
   notes        : Profit factor lower CI is below 1 ù edge is not statistically established. Deflated Sharpe probability < 0.95 ù likely overfit.
 ========================================================================
-2026-07-19 02:00:33,929 ERROR   run_portfolio                       :: Gate fail: PF_lo=0.532 <= 1.00
-2026-07-19 02:00:33,929 ERROR   run_portfolio                       :: Gate failed for EUR_USD. Skipping this symbol.
-2026-07-19 02:00:33,929 INFO    run_portfolio                       :: Optimizing GBP_USD with strategies=['ma_crossover', 'donchian_breakout', 'rsi_mean_reverse', 'regime_gated_rsi', 'ts_momentum'] ...
-2026-07-19 02:00:33,929 INFO    oandapyV20.oandapyV20               :: performing request https://api-fxpractice.oanda.com/v3/instruments/GBP_USD/candles
-2026-07-19 02:00:51,698 INFO    run_portfolio                       :: Optimization complete for GBP_USD
+2026-07-20 02:00:22,987 ERROR   run_portfolio                       :: Gate fail: PF_lo=0.532 <= 1.00
+2026-07-20 02:00:22,987 ERROR   run_portfolio                       :: Gate failed for EUR_USD. Skipping this symbol.
+2026-07-20 02:00:22,987 INFO    run_portfolio                       :: Optimizing GBP_USD with strategies=['ma_crossover', 'donchian_breakout', 'rsi_mean_reverse', 'regime_gated_rsi', 'ts_momentum'] ...
+2026-07-20 02:00:22,987 INFO    oandapyV20.oandapyV20               :: performing request https://api-fxpractice.oanda.com/v3/instruments/GBP_USD/candles
+2026-07-20 02:00:40,895 INFO    run_portfolio                       :: Optimization complete for GBP_USD
 ========================================================================
 OPTIMIZATION REPORT ù GBP_USD 4h  (fx)
 Bars analysed: 3000
@@ -121,11 +121,11 @@ OVERALL WINNER: regime_gated_rsi {'rsi_period': 7, 'oversold': 25, 'overbought':
   Deflated SR p: 0.000
   notes        : Profit factor lower CI is below 1 ù edge is not statistically established. Deflated Sharpe probability < 0.95 ù likely overfit.
 ========================================================================
-2026-07-19 02:00:51,766 ERROR   run_portfolio                       :: Gate fail: PF_lo=0.517 <= 1.00
-2026-07-19 02:00:51,766 ERROR   run_portfolio                       :: Gate failed for GBP_USD. Skipping this symbol.
-2026-07-19 02:00:51,766 INFO    run_portfolio                       :: Optimizing USD_JPY with strategies=['ma_crossover', 'donchian_breakout', 'rsi_mean_reverse', 'regime_gated_rsi', 'ts_momentum'] ...
-2026-07-19 02:00:51,766 INFO    oandapyV20.oandapyV20               :: performing request https://api-fxpractice.oanda.com/v3/instruments/USD_JPY/candles
-2026-07-19 02:01:09,641 INFO    run_portfolio                       :: Optimization complete for USD_JPY
+2026-07-20 02:00:40,969 ERROR   run_portfolio                       :: Gate fail: PF_lo=0.517 <= 1.00
+2026-07-20 02:00:40,969 ERROR   run_portfolio                       :: Gate failed for GBP_USD. Skipping this symbol.
+2026-07-20 02:00:40,969 INFO    run_portfolio                       :: Optimizing USD_JPY with strategies=['ma_crossover', 'donchian_breakout', 'rsi_mean_reverse', 'regime_gated_rsi', 'ts_momentum'] ...
+2026-07-20 02:00:40,969 INFO    oandapyV20.oandapyV20               :: performing request https://api-fxpractice.oanda.com/v3/instruments/USD_JPY/candles
+2026-07-20 02:00:58,967 INFO    run_portfolio                       :: Optimization complete for USD_JPY
 ========================================================================
 OPTIMIZATION REPORT ù USD_JPY 4h  (fx)
 Bars analysed: 3000
@@ -185,9 +185,9 @@ OVERALL WINNER: rsi_mean_reverse {'period': 14, 'oversold': 35, 'overbought': 70
   Deflated SR p: 1.000
   notes        : All checks passed.
 ========================================================================
-2026-07-19 02:01:09,721 INFO    run_portfolio                       :: Optimizing AUD_USD with strategies=['ma_crossover', 'donchian_breakout', 'rsi_mean_reverse', 'regime_gated_rsi', 'ts_momentum'] ...
-2026-07-19 02:01:09,721 INFO    oandapyV20.oandapyV20               :: performing request https://api-fxpractice.oanda.com/v3/instruments/AUD_USD/candles
-2026-07-19 02:01:27,167 INFO    run_portfolio                       :: Optimization complete for AUD_USD
+2026-07-20 02:00:59,040 INFO    run_portfolio                       :: Optimizing AUD_USD with strategies=['ma_crossover', 'donchian_breakout', 'rsi_mean_reverse', 'regime_gated_rsi', 'ts_momentum'] ...
+2026-07-20 02:00:59,041 INFO    oandapyV20.oandapyV20               :: performing request https://api-fxpractice.oanda.com/v3/instruments/AUD_USD/candles
+2026-07-20 02:01:16,982 INFO    run_portfolio                       :: Optimization complete for AUD_USD
 ========================================================================
 OPTIMIZATION REPORT ù AUD_USD 4h  (fx)
 Bars analysed: 3000
@@ -248,11 +248,11 @@ OVERALL WINNER: regime_gated_rsi {'rsi_period': 7, 'oversold': 20, 'overbought':
   Deflated SR p: 0.000
   notes        : Profit factor lower CI is below 1 ù edge is not statistically established. Deflated Sharpe probability < 0.95 ù likely overfit.
 ========================================================================
-2026-07-19 02:01:27,235 ERROR   run_portfolio                       :: Gate fail: PF_lo=0.502 <= 1.00
-2026-07-19 02:01:27,235 ERROR   run_portfolio                       :: Gate failed for AUD_USD. Skipping this symbol.
-2026-07-19 02:01:27,235 INFO    run_portfolio                       :: Optimizing USD_CAD with strategies=['ma_crossover', 'donchian_breakout', 'rsi_mean_reverse', 'regime_gated_rsi', 'ts_momentum'] ...
-2026-07-19 02:01:27,235 INFO    oandapyV20.oandapyV20               :: performing request https://api-fxpractice.oanda.com/v3/instruments/USD_CAD/candles
-2026-07-19 02:01:45,106 INFO    run_portfolio                       :: Optimization complete for USD_CAD
+2026-07-20 02:01:17,053 ERROR   run_portfolio                       :: Gate fail: PF_lo=0.502 <= 1.00
+2026-07-20 02:01:17,053 ERROR   run_portfolio                       :: Gate failed for AUD_USD. Skipping this symbol.
+2026-07-20 02:01:17,053 INFO    run_portfolio                       :: Optimizing USD_CAD with strategies=['ma_crossover', 'donchian_breakout', 'rsi_mean_reverse', 'regime_gated_rsi', 'ts_momentum'] ...
+2026-07-20 02:01:17,053 INFO    oandapyV20.oandapyV20               :: performing request https://api-fxpractice.oanda.com/v3/instruments/USD_CAD/candles
+2026-07-20 02:01:35,103 INFO    run_portfolio                       :: Optimization complete for USD_CAD
 ========================================================================
 OPTIMIZATION REPORT ù USD_CAD 4h  (fx)
 Bars analysed: 3000
@@ -311,11 +311,11 @@ OVERALL WINNER: ma_crossover {'fast': 5, 'slow': 50}
   Deflated SR p: 1.000
   notes        : Win-rate lower bound is uncomfortably low. Profit factor lower CI is below 1 ù edge is not statistically established.
 ========================================================================
-2026-07-19 02:01:45,192 ERROR   run_portfolio                       :: Gate fail: PF_lo=0.688 <= 1.00
-2026-07-19 02:01:45,192 ERROR   run_portfolio                       :: Gate failed for USD_CAD. Skipping this symbol.
-2026-07-19 02:01:45,192 INFO    run_portfolio                       :: Optimizing NZD_USD with strategies=['ma_crossover', 'donchian_breakout', 'rsi_mean_reverse', 'regime_gated_rsi', 'ts_momentum'] ...
-2026-07-19 02:01:45,192 INFO    oandapyV20.oandapyV20               :: performing request https://api-fxpractice.oanda.com/v3/instruments/NZD_USD/candles
-2026-07-19 02:02:02,896 INFO    run_portfolio                       :: Optimization complete for NZD_USD
+2026-07-20 02:01:35,181 ERROR   run_portfolio                       :: Gate fail: PF_lo=0.688 <= 1.00
+2026-07-20 02:01:35,181 ERROR   run_portfolio                       :: Gate failed for USD_CAD. Skipping this symbol.
+2026-07-20 02:01:35,181 INFO    run_portfolio                       :: Optimizing NZD_USD with strategies=['ma_crossover', 'donchian_breakout', 'rsi_mean_reverse', 'regime_gated_rsi', 'ts_momentum'] ...
+2026-07-20 02:01:35,181 INFO    oandapyV20.oandapyV20               :: performing request https://api-fxpractice.oanda.com/v3/instruments/NZD_USD/candles
+2026-07-20 02:01:53,246 INFO    run_portfolio                       :: Optimization complete for NZD_USD
 ========================================================================
 OPTIMIZATION REPORT ù NZD_USD 4h  (fx)
 Bars analysed: 3000
@@ -376,11 +376,11 @@ OVERALL WINNER: rsi_mean_reverse {'period': 7, 'oversold': 20, 'overbought': 70}
   Deflated SR p: 0.000
   notes        : Profit factor lower CI is below 1 ù edge is not statistically established. Deflated Sharpe probability < 0.95 ù likely overfit.
 ========================================================================
-2026-07-19 02:02:02,979 ERROR   run_portfolio                       :: Gate fail: PF_lo=0.650 <= 1.00
-2026-07-19 02:02:02,979 ERROR   run_portfolio                       :: Gate failed for NZD_USD. Skipping this symbol.
-2026-07-19 02:02:02,979 INFO    run_portfolio                       :: Optimizing EUR_JPY with strategies=['ma_crossover', 'donchian_breakout', 'rsi_mean_reverse', 'regime_gated_rsi', 'ts_momentum'] ...
-2026-07-19 02:02:02,979 INFO    oandapyV20.oandapyV20               :: performing request https://api-fxpractice.oanda.com/v3/instruments/EUR_JPY/candles
-2026-07-19 02:02:20,480 INFO    run_portfolio                       :: Optimization complete for EUR_JPY
+2026-07-20 02:01:53,329 ERROR   run_portfolio                       :: Gate fail: PF_lo=0.650 <= 1.00
+2026-07-20 02:01:53,329 ERROR   run_portfolio                       :: Gate failed for NZD_USD. Skipping this symbol.
+2026-07-20 02:01:53,329 INFO    run_portfolio                       :: Optimizing EUR_JPY with strategies=['ma_crossover', 'donchian_breakout', 'rsi_mean_reverse', 'regime_gated_rsi', 'ts_momentum'] ...
+2026-07-20 02:01:53,329 INFO    oandapyV20.oandapyV20               :: performing request https://api-fxpractice.oanda.com/v3/instruments/EUR_JPY/candles
+2026-07-20 02:02:10,938 INFO    run_portfolio                       :: Optimization complete for EUR_JPY
 ========================================================================
 OPTIMIZATION REPORT ù EUR_JPY 4h  (fx)
 Bars analysed: 3000
@@ -440,11 +440,11 @@ OVERALL WINNER: regime_gated_rsi {'rsi_period': 7, 'oversold': 20, 'overbought':
   Deflated SR p: 0.471
   notes        : Profit factor lower CI is below 1 ù edge is not statistically established. Deflated Sharpe probability < 0.95 ù likely overfit.
 ========================================================================
-2026-07-19 02:02:20,547 ERROR   run_portfolio                       :: Gate fail: PF_lo=0.662 <= 1.00
-2026-07-19 02:02:20,547 ERROR   run_portfolio                       :: Gate failed for EUR_JPY. Skipping this symbol.
-2026-07-19 02:02:20,547 INFO    run_portfolio                       :: Optimizing GBP_JPY with strategies=['ma_crossover', 'donchian_breakout', 'rsi_mean_reverse', 'regime_gated_rsi', 'ts_momentum'] ...
-2026-07-19 02:02:20,547 INFO    oandapyV20.oandapyV20               :: performing request https://api-fxpractice.oanda.com/v3/instruments/GBP_JPY/candles
-2026-07-19 02:02:38,160 INFO    run_portfolio                       :: Optimization complete for GBP_JPY
+2026-07-20 02:02:11,008 ERROR   run_portfolio                       :: Gate fail: PF_lo=0.662 <= 1.00
+2026-07-20 02:02:11,008 ERROR   run_portfolio                       :: Gate failed for EUR_JPY. Skipping this symbol.
+2026-07-20 02:02:11,008 INFO    run_portfolio                       :: Optimizing GBP_JPY with strategies=['ma_crossover', 'donchian_breakout', 'rsi_mean_reverse', 'regime_gated_rsi', 'ts_momentum'] ...
+2026-07-20 02:02:11,009 INFO    oandapyV20.oandapyV20               :: performing request https://api-fxpractice.oanda.com/v3/instruments/GBP_JPY/candles
+2026-07-20 02:02:28,795 INFO    run_portfolio                       :: Optimization complete for GBP_JPY
 ========================================================================
 OPTIMIZATION REPORT ù GBP_JPY 4h  (fx)
 Bars analysed: 3000
@@ -502,11 +502,11 @@ OVERALL WINNER: rsi_mean_reverse {'period': 7, 'oversold': 20, 'overbought': 80}
   Deflated SR p: 0.344
   notes        : Profit factor lower CI is below 1 ù edge is not statistically established. Deflated Sharpe probability < 0.95 ù likely overfit.
 ========================================================================
-2026-07-19 02:02:38,228 ERROR   run_portfolio                       :: Gate fail: PF_lo=0.885 <= 1.00
-2026-07-19 02:02:38,228 ERROR   run_portfolio                       :: Gate failed for GBP_JPY. Skipping this symbol.
-2026-07-19 02:02:38,228 INFO    run_portfolio                       :: Optimizing AUD_JPY with strategies=['ma_crossover', 'donchian_breakout', 'rsi_mean_reverse', 'regime_gated_rsi', 'ts_momentum'] ...
-2026-07-19 02:02:38,228 INFO    oandapyV20.oandapyV20               :: performing request https://api-fxpractice.oanda.com/v3/instruments/AUD_JPY/candles
-2026-07-19 02:02:56,433 INFO    run_portfolio                       :: Optimization complete for AUD_JPY
+2026-07-20 02:02:28,864 ERROR   run_portfolio                       :: Gate fail: PF_lo=0.885 <= 1.00
+2026-07-20 02:02:28,864 ERROR   run_portfolio                       :: Gate failed for GBP_JPY. Skipping this symbol.
+2026-07-20 02:02:28,864 INFO    run_portfolio                       :: Optimizing AUD_JPY with strategies=['ma_crossover', 'donchian_breakout', 'rsi_mean_reverse', 'regime_gated_rsi', 'ts_momentum'] ...
+2026-07-20 02:02:28,864 INFO    oandapyV20.oandapyV20               :: performing request https://api-fxpractice.oanda.com/v3/instruments/AUD_JPY/candles
+2026-07-20 02:02:46,705 INFO    run_portfolio                       :: Optimization complete for AUD_JPY
 ========================================================================
 OPTIMIZATION REPORT ù AUD_JPY 4h  (fx)
 Bars analysed: 3000
@@ -558,9 +558,9 @@ OVERALL WINNER: rsi_mean_reverse {'period': 14, 'oversold': 35, 'overbought': 75
   Deflated SR p: 1.000
   notes        : All checks passed.
 ========================================================================
-2026-07-19 02:02:56,512 INFO    run_portfolio                       :: Optimizing NZD_JPY with strategies=['ma_crossover', 'donchian_breakout', 'rsi_mean_reverse', 'regime_gated_rsi', 'ts_momentum'] ...
-2026-07-19 02:02:56,512 INFO    oandapyV20.oandapyV20               :: performing request https://api-fxpractice.oanda.com/v3/instruments/NZD_JPY/candles
-2026-07-19 02:03:14,399 INFO    run_portfolio                       :: Optimization complete for NZD_JPY
+2026-07-20 02:02:46,782 INFO    run_portfolio                       :: Optimizing NZD_JPY with strategies=['ma_crossover', 'donchian_breakout', 'rsi_mean_reverse', 'regime_gated_rsi', 'ts_momentum'] ...
+2026-07-20 02:02:46,782 INFO    oandapyV20.oandapyV20               :: performing request https://api-fxpractice.oanda.com/v3/instruments/NZD_JPY/candles
+2026-07-20 02:03:05,370 INFO    run_portfolio                       :: Optimization complete for NZD_JPY
 ========================================================================
 OPTIMIZATION REPORT ù NZD_JPY 4h  (fx)
 Bars analysed: 3000
@@ -617,11 +617,11 @@ OVERALL WINNER: rsi_mean_reverse {'period': 14, 'oversold': 25, 'overbought': 70
   Deflated SR p: 0.994
   notes        : Profit factor lower CI is below 1 ù edge is not statistically established.
 ========================================================================
-2026-07-19 02:03:14,486 ERROR   run_portfolio                       :: Gate fail: PF_lo=0.883 <= 1.00
-2026-07-19 02:03:14,487 ERROR   run_portfolio                       :: Gate failed for NZD_JPY. Skipping this symbol.
-2026-07-19 02:03:14,487 INFO    run_portfolio                       :: Optimizing EUR_GBP with strategies=['ma_crossover', 'donchian_breakout', 'rsi_mean_reverse', 'regime_gated_rsi', 'ts_momentum'] ...
-2026-07-19 02:03:14,487 INFO    oandapyV20.oandapyV20               :: performing request https://api-fxpractice.oanda.com/v3/instruments/EUR_GBP/candles
-2026-07-19 02:03:31,935 INFO    run_portfolio                       :: Optimization complete for EUR_GBP
+2026-07-20 02:03:05,456 ERROR   run_portfolio                       :: Gate fail: PF_lo=0.883 <= 1.00
+2026-07-20 02:03:05,456 ERROR   run_portfolio                       :: Gate failed for NZD_JPY. Skipping this symbol.
+2026-07-20 02:03:05,456 INFO    run_portfolio                       :: Optimizing EUR_GBP with strategies=['ma_crossover', 'donchian_breakout', 'rsi_mean_reverse', 'regime_gated_rsi', 'ts_momentum'] ...
+2026-07-20 02:03:05,456 INFO    oandapyV20.oandapyV20               :: performing request https://api-fxpractice.oanda.com/v3/instruments/EUR_GBP/candles
+2026-07-20 02:03:23,456 INFO    run_portfolio                       :: Optimization complete for EUR_GBP
 ========================================================================
 OPTIMIZATION REPORT ù EUR_GBP 4h  (fx)
 Bars analysed: 3000
@@ -677,7 +677,7 @@ OVERALL WINNER: rsi_mean_reverse {'period': 7, 'oversold': 25, 'overbought': 75}
   Deflated SR p: 0.970
   notes        : Profit factor lower CI is below 1 ù edge is not statistically established.
 ========================================================================
-2026-07-19 02:03:31,996 ERROR   run_portfolio                       :: Gate fail: PF_lo=0.781 <= 1.00
-2026-07-19 02:03:31,996 ERROR   run_portfolio                       :: Gate failed for EUR_GBP. Skipping this symbol.
-2026-07-19 02:03:31,997 INFO    run_portfolio                       :: Saved 2 winners to ./discovery_fx_4h_state\winners.json
-2026-07-19 02:03:31,997 INFO    run_portfolio                       :: --dry-run: exiting before portfolio start
+2026-07-20 02:03:23,528 ERROR   run_portfolio                       :: Gate fail: PF_lo=0.781 <= 1.00
+2026-07-20 02:03:23,528 ERROR   run_portfolio                       :: Gate failed for EUR_GBP. Skipping this symbol.
+2026-07-20 02:03:23,529 INFO    run_portfolio                       :: Saved 2 winners to ./discovery_fx_4h_state\winners.json
+2026-07-20 02:03:23,529 INFO    run_portfolio                       :: --dry-run: exiting before portfolio start
