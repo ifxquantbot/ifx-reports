@@ -1,1 +1,34 @@
-{}
+{
+  "AUD_USD": {
+    "strategy": "regime_gated_rsi",
+    "params": {
+      "rsi_period": 7,
+      "oversold": 30,
+      "overbought": 80,
+      "trend_ma": 200,
+      "slope_window": 20,
+      "trend_threshold": 0.001
+    },
+    "score": 1.2919922430957147,
+    "validation": {
+      "win_rate": {
+        "point": 0.7267441860465116,
+        "lo": 0.6453488372093024,
+        "hi": 0.7965116279069767
+      },
+      "profit_factor": {
+        "point": 1.4314385744405358,
+        "lo": 1.0044308960662895,
+        "hi": 2.1183791406494015
+      },
+      "sharpe": {
+        "point": 0.83453378130361,
+        "lo": 0.13094978343648705,
+        "hi": 1.5936730283890777
+      },
+      "dsr_prob": 0.9999019651465676,
+      "pbo": null,
+      "notes": "All checks passed."
+    }
+  }
+}
