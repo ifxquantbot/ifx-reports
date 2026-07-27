@@ -1,34 +1,31 @@
 {
-  "AUD_USD": {
-    "strategy": "regime_gated_rsi",
+  "EUR_JPY": {
+    "strategy": "rsi_mean_reverse",
     "params": {
-      "rsi_period": 7,
+      "period": 14,
       "oversold": 30,
-      "overbought": 80,
-      "trend_ma": 200,
-      "slope_window": 20,
-      "trend_threshold": 0.001
+      "overbought": 70
     },
-    "score": 1.2919922430957147,
+    "score": 1.3966520056384237,
     "validation": {
       "win_rate": {
-        "point": 0.7267441860465116,
-        "lo": 0.6453488372093024,
-        "hi": 0.7965116279069767
+        "point": 0.5789473684210527,
+        "lo": 0.5131578947368421,
+        "hi": 0.6578947368421053
       },
       "profit_factor": {
-        "point": 1.4314385744405358,
-        "lo": 1.0044308960662895,
-        "hi": 2.1183791406494015
+        "point": 1.2804997632557733,
+        "lo": 1.0161719500957673,
+        "hi": 1.724284026668071
       },
       "sharpe": {
-        "point": 0.83453378130361,
-        "lo": 0.13094978343648705,
-        "hi": 1.5936730283890777
+        "point": 0.4323747169099046,
+        "lo": -0.15180151561881783,
+        "hi": 1.0520999517466738
       },
-      "dsr_prob": 0.9999019651465676,
+      "dsr_prob": 0.9306168739005798,
       "pbo": null,
-      "notes": "All checks passed."
+      "notes": "Deflated Sharpe probability < 0.95 \u2014 likely overfit."
     }
   }
 }
