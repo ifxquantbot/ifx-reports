@@ -1,1 +1,31 @@
-{}
+{
+  "USD_JPY": {
+    "strategy": "rsi_mean_reverse",
+    "params": {
+      "period": 14,
+      "oversold": 35,
+      "overbought": 70
+    },
+    "score": 1.1199383212607803,
+    "validation": {
+      "win_rate": {
+        "point": 0.5811965811965812,
+        "lo": 0.5126068376068376,
+        "hi": 0.6581196581196581
+      },
+      "profit_factor": {
+        "point": 1.425560323587302,
+        "lo": 1.055455284795584,
+        "hi": 1.9387813212494223
+      },
+      "sharpe": {
+        "point": 0.7577212144412898,
+        "lo": 0.05797095807986525,
+        "hi": 1.4397193841837297
+      },
+      "dsr_prob": 0.9999999912223806,
+      "pbo": null,
+      "notes": "All checks passed."
+    }
+  }
+}

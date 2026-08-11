@@ -1,611 +1,611 @@
-﻿2026-08-11 02:00:03,631 INFO    run_portfolio                       :: Loaded config: 11 symbols, asset_class=fx, source=oanda
-2026-08-11 02:00:03,708 INFO    oandapyV20.oandapyV20               :: setting up API-client for environment practice
-2026-08-11 02:00:03,708 INFO    run_portfolio                       :: Optimizing EUR_USD with strategies=['ma_crossover', 'donchian_breakout', 'rsi_mean_reverse', 'regime_gated_rsi', 'ts_momentum'] ...
-2026-08-11 02:00:03,713 INFO    oandapyV20.oandapyV20               :: performing request https://api-fxpractice.oanda.com/v3/instruments/EUR_USD/candles
-2026-08-11 02:00:23,286 INFO    run_portfolio                       :: Optimization complete for EUR_USD
+﻿2026-08-12 02:00:04,015 INFO    run_portfolio                       :: Loaded config: 11 symbols, asset_class=fx, source=oanda
+2026-08-12 02:00:04,086 INFO    oandapyV20.oandapyV20               :: setting up API-client for environment practice
+2026-08-12 02:00:04,088 INFO    run_portfolio                       :: Optimizing EUR_USD with strategies=['ma_crossover', 'donchian_breakout', 'rsi_mean_reverse', 'regime_gated_rsi', 'ts_momentum'] ...
+2026-08-12 02:00:04,093 INFO    oandapyV20.oandapyV20               :: performing request https://api-fxpractice.oanda.com/v3/instruments/EUR_USD/candles
+2026-08-12 02:00:25,477 INFO    run_portfolio                       :: Optimization complete for EUR_USD
 ========================================================================
 OPTIMIZATION REPORT ù EUR_USD 4h  (fx)
 Bars analysed: 2999
 ------------------------------------------------------------------------
 Regime distribution:
-  bull/low_vol               32.9%
-  bear/low_vol               21.0%
-  bear/high_vol              18.6%
-  range/low_vol              13.5%
+  bull/low_vol               33.0%
+  bear/low_vol               21.1%
+  bear/high_vol              18.4%
+  range/low_vol              13.4%
   bull/high_vol              12.8%
-  range/high_vol              1.1%
+  range/high_vol              1.3%
 ------------------------------------------------------------------------
 
 >> ma_crossover ù top 3 of 20 variants:
-   params={'fast': 30, 'slow': 100}  score=0.542  wr=26.51%  PF=0.91  Sharpe=-0.51  MDD=17.13%  trades=83  regimes=0/2
+   params={'fast': 10, 'slow': 50}  score=0.522  wr=32.80%  PF=0.81  Sharpe=-1.22  MDD=17.05%  trades=125  regimes=1/4
      flags: regime_failure
-   params={'fast': 10, 'slow': 50}  score=0.531  wr=33.06%  PF=0.81  Sharpe=-1.22  MDD=17.05%  trades=124  regimes=1/4
+   params={'fast': 5, 'slow': 50}  score=0.438  wr=32.09%  PF=0.82  Sharpe=-1.05  MDD=19.73%  trades=134  regimes=1/3
      flags: regime_failure
-   params={'fast': 5, 'slow': 50}  score=0.492  wr=32.33%  PF=0.84  Sharpe=-0.95  MDD=19.73%  trades=133  regimes=1/3
+   params={'fast': 20, 'slow': 50}  score=0.390  wr=36.44%  PF=0.82  Sharpe=-1.09  MDD=17.65%  trades=118  regimes=0/1
      flags: regime_failure
 
 >> donchian_breakout ù top 3 of 15 variants:
-   params={'lookback': 10, 'exit_lookback': 5}  score=1.115  wr=35.81%  PF=0.88  Sharpe=-0.77  MDD=11.56%  trades=148  regimes=2/4
+   params={'lookback': 10, 'exit_lookback': 5}  score=1.122  wr=35.57%  PF=0.88  Sharpe=-0.79  MDD=11.56%  trades=149  regimes=2/4
      flags: regime_failure
-   params={'lookback': 10, 'exit_lookback': 10}  score=0.622  wr=27.64%  PF=0.76  Sharpe=-1.61  MDD=14.12%  trades=123  regimes=1/4
+   params={'lookback': 20, 'exit_lookback': 5}  score=0.593  wr=39.29%  PF=0.82  Sharpe=-1.23  MDD=9.56%  trades=112  regimes=1/4
      flags: regime_failure
-   params={'lookback': 20, 'exit_lookback': 5}  score=0.593  wr=38.94%  PF=0.82  Sharpe=-1.26  MDD=9.56%  trades=113  regimes=1/4
+   params={'lookback': 10, 'exit_lookback': 10}  score=0.558  wr=27.64%  PF=0.76  Sharpe=-1.63  MDD=14.72%  trades=123  regimes=1/4
      flags: regime_failure
 
 >> rsi_mean_reverse ù top 3 of 64 variants:
-   params={'period': 7, 'oversold': 20, 'overbought': 80}  score=1.147  wr=59.34%  PF=0.94  Sharpe=-0.46  MDD=7.88%  trades=91  regimes=1/2
+   params={'period': 7, 'oversold': 20, 'overbought': 80}  score=1.242  wr=61.11%  PF=0.99  Sharpe=-0.06  MDD=7.88%  trades=90  regimes=1/1
+   params={'period': 14, 'oversold': 35, 'overbought': 65}  score=0.853  wr=55.12%  PF=1.00  Sharpe=0.02  MDD=8.29%  trades=127  regimes=0/2
      flags: regime_failure
-   params={'period': 14, 'oversold': 30, 'overbought': 70}  score=1.096  wr=48.31%  PF=0.87  Sharpe=-1.10  MDD=7.97%  trades=89  regimes=0/1
-     flags: regime_failure
-   params={'period': 7, 'oversold': 20, 'overbought': 75}  score=1.045  wr=59.17%  PF=0.96  Sharpe=-0.30  MDD=9.44%  trades=120  regimes=1/2
+   params={'period': 14, 'oversold': 30, 'overbought': 65}  score=0.828  wr=53.21%  PF=0.96  Sharpe=-0.34  MDD=6.91%  trades=109  regimes=1/2
      flags: regime_failure
 
 >> regime_gated_rsi ù top 3 of 972 variants:
-   params={'rsi_period': 7, 'oversold': 25, 'overbought': 80, 'trend_ma': 150, 'slope_window': 10, 'trend_threshold': 0.005}  score=2.273  wr=62.14%  PF=0.76  Sharpe=-1.58  MDD=7.73%  trades=140  regimes=2/2
-   params={'rsi_period': 7, 'oversold': 25, 'overbought': 80, 'trend_ma': 150, 'slope_window': 10, 'trend_threshold': 0.002}  score=2.273  wr=62.14%  PF=0.76  Sharpe=-1.58  MDD=7.73%  trades=140  regimes=2/2
-   params={'rsi_period': 7, 'oversold': 25, 'overbought': 80, 'trend_ma': 150, 'slope_window': 10, 'trend_threshold': 0.001}  score=2.273  wr=62.14%  PF=0.76  Sharpe=-1.58  MDD=7.73%  trades=140  regimes=2/2
+   params={'rsi_period': 7, 'oversold': 25, 'overbought': 80, 'trend_ma': 150, 'slope_window': 40, 'trend_threshold': 0.0005}  score=4.116  wr=62.22%  PF=0.75  Sharpe=-1.62  MDD=7.14%  trades=135  regimes=1/1
+   params={'rsi_period': 7, 'oversold': 25, 'overbought': 80, 'trend_ma': 150, 'slope_window': 40, 'trend_threshold': 0.001}  score=4.116  wr=62.22%  PF=0.75  Sharpe=-1.62  MDD=7.14%  trades=135  regimes=1/1
+   params={'rsi_period': 7, 'oversold': 25, 'overbought': 80, 'trend_ma': 150, 'slope_window': 40, 'trend_threshold': 0.002}  score=4.116  wr=62.22%  PF=0.75  Sharpe=-1.62  MDD=7.14%  trades=135  regimes=1/1
 
 >> ts_momentum ù top 3 of 5 variants:
-   params={'lookback': 60}  score=0.423  wr=22.05%  PF=0.55  Sharpe=-3.00  MDD=32.27%  trades=195  regimes=1/4
+   params={'lookback': 20}  score=0.339  wr=23.15%  PF=0.49  Sharpe=-3.87  MDD=47.56%  trades=337  regimes=1/6
      flags: regime_failure
-   params={'lookback': 20}  score=0.385  wr=23.58%  PF=0.50  Sharpe=-3.85  MDD=47.27%  trades=335  regimes=1/6
+   params={'lookback': 60}  score=0.315  wr=22.16%  PF=0.55  Sharpe=-2.92  MDD=32.27%  trades=194  regimes=0/3
      flags: regime_failure
-   params={'lookback': 120}  score=0.000  wr=31.63%  PF=1.31  Sharpe=1.03  MDD=10.98%  trades=98  regimes=0/0
+   params={'lookback': 120}  score=0.000  wr=31.96%  PF=1.33  Sharpe=1.08  MDD=10.98%  trades=97  regimes=0/0
 ------------------------------------------------------------------------
-OVERALL WINNER: regime_gated_rsi {'rsi_period': 7, 'oversold': 25, 'overbought': 80, 'trend_ma': 150, 'slope_window': 10, 'trend_threshold': 0.005}
-  win rate     : 62.14%  [55.00%, 68.57%]
-  profit factor: 0.755  [0.529, 1.291]
-  Sharpe (ann) : -0.167  [-0.796, 0.550]
+OVERALL WINNER: regime_gated_rsi {'rsi_period': 7, 'oversold': 25, 'overbought': 80, 'trend_ma': 150, 'slope_window': 40, 'trend_threshold': 0.0005}
+  win rate     : 62.22%  [55.56%, 68.89%]
+  profit factor: 0.750  [0.518, 1.237]
+  Sharpe (ann) : -0.174  [-0.733, 0.569]
   Deflated SR p: 0.000
   notes        : Profit factor lower CI is below 1 ù edge is not statistically established. Deflated Sharpe probability < 0.95 ù likely overfit.
 ========================================================================
-2026-08-11 02:00:23,398 ERROR   run_portfolio                       :: Gate fail: PF_lo=0.529 <= 1.00
-2026-08-11 02:00:23,398 ERROR   run_portfolio                       :: Gate failed for EUR_USD. Skipping this symbol.
-2026-08-11 02:00:23,399 INFO    run_portfolio                       :: Optimizing GBP_USD with strategies=['ma_crossover', 'donchian_breakout', 'rsi_mean_reverse', 'regime_gated_rsi', 'ts_momentum'] ...
-2026-08-11 02:00:23,399 INFO    oandapyV20.oandapyV20               :: performing request https://api-fxpractice.oanda.com/v3/instruments/GBP_USD/candles
-2026-08-11 02:00:42,783 INFO    run_portfolio                       :: Optimization complete for GBP_USD
+2026-08-12 02:00:25,602 ERROR   run_portfolio                       :: Gate fail: PF_lo=0.518 <= 1.00
+2026-08-12 02:00:25,602 ERROR   run_portfolio                       :: Gate failed for EUR_USD. Skipping this symbol.
+2026-08-12 02:00:25,602 INFO    run_portfolio                       :: Optimizing GBP_USD with strategies=['ma_crossover', 'donchian_breakout', 'rsi_mean_reverse', 'regime_gated_rsi', 'ts_momentum'] ...
+2026-08-12 02:00:25,602 INFO    oandapyV20.oandapyV20               :: performing request https://api-fxpractice.oanda.com/v3/instruments/GBP_USD/candles
+2026-08-12 02:00:46,829 INFO    run_portfolio                       :: Optimization complete for GBP_USD
 ========================================================================
 OPTIMIZATION REPORT ù GBP_USD 4h  (fx)
 Bars analysed: 2999
 ------------------------------------------------------------------------
 Regime distribution:
-  bull/low_vol               30.5%
+  bull/low_vol               30.8%
   bear/low_vol               23.1%
-  bear/high_vol              22.1%
-  bull/high_vol              10.3%
-  range/low_vol              10.3%
-  range/high_vol              3.6%
+  bear/high_vol              21.9%
+  range/low_vol              10.4%
+  bull/high_vol              10.2%
+  range/high_vol              3.5%
 ------------------------------------------------------------------------
 
 >> ma_crossover ù top 3 of 20 variants:
-   params={'fast': 5, 'slow': 100}  score=0.715  wr=24.77%  PF=0.53  Sharpe=-3.65  MDD=25.39%  trades=109  regimes=0/1
+   params={'fast': 10, 'slow': 50}  score=0.631  wr=31.43%  PF=0.66  Sharpe=-2.43  MDD=25.45%  trades=140  regimes=0/2
      flags: regime_failure
-   params={'fast': 5, 'slow': 50}  score=0.498  wr=30.46%  PF=0.70  Sharpe=-2.13  MDD=22.28%  trades=151  regimes=2/4
+   params={'fast': 5, 'slow': 50}  score=0.538  wr=30.26%  PF=0.68  Sharpe=-2.27  MDD=22.28%  trades=152  regimes=2/4
      flags: regime_failure
-   params={'fast': 10, 'slow': 50}  score=0.491  wr=31.65%  PF=0.68  Sharpe=-2.29  MDD=25.45%  trades=139  regimes=1/3
+   params={'fast': 30, 'slow': 50}  score=0.346  wr=34.68%  PF=0.79  Sharpe=-1.39  MDD=28.50%  trades=124  regimes=0/3
      flags: regime_failure
 
 >> donchian_breakout ù top 3 of 15 variants:
-   params={'lookback': 10, 'exit_lookback': 5}  score=0.685  wr=31.87%  PF=0.75  Sharpe=-1.83  MDD=15.11%  trades=160  regimes=2/4
+   params={'lookback': 10, 'exit_lookback': 5}  score=0.705  wr=31.68%  PF=0.75  Sharpe=-1.86  MDD=15.26%  trades=161  regimes=1/4
      flags: regime_failure
-   params={'lookback': 20, 'exit_lookback': 10}  score=0.644  wr=28.16%  PF=0.80  Sharpe=-1.36  MDD=14.66%  trades=103  regimes=0/1
+   params={'lookback': 10, 'exit_lookback': 10}  score=0.692  wr=29.66%  PF=0.83  Sharpe=-1.14  MDD=13.28%  trades=118  regimes=0/3
      flags: regime_failure
-   params={'lookback': 10, 'exit_lookback': 10}  score=0.640  wr=29.66%  PF=0.83  Sharpe=-1.15  MDD=13.28%  trades=118  regimes=1/4
+   params={'lookback': 20, 'exit_lookback': 10}  score=0.601  wr=28.16%  PF=0.80  Sharpe=-1.40  MDD=14.66%  trades=103  regimes=0/1
      flags: regime_failure
 
 >> rsi_mean_reverse ù top 3 of 64 variants:
-   params={'period': 14, 'oversold': 30, 'overbought': 65}  score=1.221  wr=52.68%  PF=0.91  Sharpe=-0.66  MDD=13.85%  trades=112  regimes=2/2
-   params={'period': 14, 'oversold': 35, 'overbought': 65}  score=1.116  wr=54.14%  PF=0.93  Sharpe=-0.55  MDD=9.98%  trades=133  regimes=3/4
+   params={'period': 14, 'oversold': 35, 'overbought': 65}  score=1.055  wr=52.99%  PF=0.90  Sharpe=-0.77  MDD=10.86%  trades=134  regimes=1/3
      flags: regime_failure
-   params={'period': 14, 'oversold': 25, 'overbought': 65}  score=1.011  wr=54.65%  PF=1.02  Sharpe=0.16  MDD=7.60%  trades=86  regimes=1/2
+   params={'period': 7, 'oversold': 20, 'overbought': 65}  score=0.903  wr=56.41%  PF=0.84  Sharpe=-1.18  MDD=14.52%  trades=195  regimes=1/4
+     flags: regime_failure
+   params={'period': 14, 'oversold': 30, 'overbought': 65}  score=0.888  wr=51.79%  PF=0.90  Sharpe=-0.76  MDD=13.65%  trades=112  regimes=1/2
      flags: regime_failure
 
 >> regime_gated_rsi ù top 3 of 972 variants:
-   params={'rsi_period': 7, 'oversold': 25, 'overbought': 75, 'trend_ma': 100, 'slope_window': 40, 'trend_threshold': 0.005}  score=0.857  wr=57.39%  PF=0.74  Sharpe=-1.72  MDD=10.36%  trades=176  regimes=0/3
+   params={'rsi_period': 7, 'oversold': 20, 'overbought': 70, 'trend_ma': 100, 'slope_window': 40, 'trend_threshold': 0.0005}  score=0.748  wr=60.71%  PF=0.72  Sharpe=-1.91  MDD=10.60%  trades=196  regimes=0/2
      flags: regime_failure
-   params={'rsi_period': 7, 'oversold': 25, 'overbought': 75, 'trend_ma': 100, 'slope_window': 40, 'trend_threshold': 0.002}  score=0.857  wr=57.39%  PF=0.74  Sharpe=-1.72  MDD=10.36%  trades=176  regimes=0/3
+   params={'rsi_period': 7, 'oversold': 20, 'overbought': 70, 'trend_ma': 100, 'slope_window': 40, 'trend_threshold': 0.001}  score=0.748  wr=60.71%  PF=0.72  Sharpe=-1.91  MDD=10.60%  trades=196  regimes=0/2
      flags: regime_failure
-   params={'rsi_period': 7, 'oversold': 25, 'overbought': 75, 'trend_ma': 100, 'slope_window': 40, 'trend_threshold': 0.001}  score=0.857  wr=57.39%  PF=0.74  Sharpe=-1.72  MDD=10.36%  trades=176  regimes=0/3
+   params={'rsi_period': 7, 'oversold': 20, 'overbought': 70, 'trend_ma': 100, 'slope_window': 40, 'trend_threshold': 0.002}  score=0.748  wr=60.71%  PF=0.72  Sharpe=-1.91  MDD=10.60%  trades=196  regimes=0/2
      flags: regime_failure
 
 >> ts_momentum ù top 3 of 5 variants:
-   params={'lookback': 252}  score=0.454  wr=22.22%  PF=0.59  Sharpe=-1.87  MDD=30.05%  trades=108  regimes=0/2
+   params={'lookback': 252}  score=0.529  wr=22.43%  PF=0.60  Sharpe=-1.81  MDD=30.05%  trades=107  regimes=0/2
      flags: regime_failure
-   params={'lookback': 20}  score=0.354  wr=26.32%  PF=0.52  Sharpe=-3.55  MDD=47.28%  trades=342  regimes=0/5
+   params={'lookback': 20}  score=0.382  wr=26.39%  PF=0.52  Sharpe=-3.53  MDD=47.28%  trades=341  regimes=1/5
      flags: regime_failure
-   params={'lookback': 60}  score=0.302  wr=24.42%  PF=0.56  Sharpe=-3.32  MDD=30.74%  trades=172  regimes=0/3
+   params={'lookback': 120}  score=0.265  wr=26.72%  PF=0.70  Sharpe=-1.82  MDD=14.76%  trades=116  regimes=0/1
      flags: regime_failure
 ------------------------------------------------------------------------
-OVERALL WINNER: rsi_mean_reverse {'period': 14, 'oversold': 30, 'overbought': 65}
-  win rate     : 52.68%  [46.43%, 59.82%]
-  profit factor: 0.915  [0.659, 1.213]
-  Sharpe (ann) : -0.051  [-0.694, 0.698]
-  Deflated SR p: 0.002
+OVERALL WINNER: rsi_mean_reverse {'period': 14, 'oversold': 35, 'overbought': 65}
+  win rate     : 52.99%  [47.01%, 58.21%]
+  profit factor: 0.902  [0.689, 1.146]
+  Sharpe (ann) : -0.079  [-0.759, 0.571]
+  Deflated SR p: 0.001
   notes        : Profit factor lower CI is below 1 ù edge is not statistically established. Deflated Sharpe probability < 0.95 ù likely overfit.
 ========================================================================
-2026-08-11 02:00:42,853 ERROR   run_portfolio                       :: Gate fail: PF_lo=0.659 <= 1.00
-2026-08-11 02:00:42,854 ERROR   run_portfolio                       :: Gate failed for GBP_USD. Skipping this symbol.
-2026-08-11 02:00:42,854 INFO    run_portfolio                       :: Optimizing USD_JPY with strategies=['ma_crossover', 'donchian_breakout', 'rsi_mean_reverse', 'regime_gated_rsi', 'ts_momentum'] ...
-2026-08-11 02:00:42,854 INFO    oandapyV20.oandapyV20               :: performing request https://api-fxpractice.oanda.com/v3/instruments/USD_JPY/candles
-2026-08-11 02:01:02,613 INFO    run_portfolio                       :: Optimization complete for USD_JPY
+2026-08-12 02:00:46,903 ERROR   run_portfolio                       :: Gate fail: PF_lo=0.689 <= 1.00
+2026-08-12 02:00:46,903 ERROR   run_portfolio                       :: Gate failed for GBP_USD. Skipping this symbol.
+2026-08-12 02:00:46,903 INFO    run_portfolio                       :: Optimizing USD_JPY with strategies=['ma_crossover', 'donchian_breakout', 'rsi_mean_reverse', 'regime_gated_rsi', 'ts_momentum'] ...
+2026-08-12 02:00:46,903 INFO    oandapyV20.oandapyV20               :: performing request https://api-fxpractice.oanda.com/v3/instruments/USD_JPY/candles
+2026-08-12 02:01:08,519 INFO    run_portfolio                       :: Optimization complete for USD_JPY
 ========================================================================
 OPTIMIZATION REPORT ù USD_JPY 4h  (fx)
 Bars analysed: 2999
 ------------------------------------------------------------------------
 Regime distribution:
-  bull/low_vol               47.3%
-  bear/low_vol               16.6%
-  range/low_vol              13.6%
-  bear/high_vol              11.2%
+  bull/low_vol               47.0%
+  bear/low_vol               16.5%
+  range/low_vol              13.8%
+  bear/high_vol              11.5%
   bull/high_vol               9.6%
-  range/high_vol              1.7%
+  range/high_vol              1.5%
 ------------------------------------------------------------------------
 
 >> ma_crossover ù top 3 of 20 variants:
-   params={'fast': 20, 'slow': 50}  score=0.488  wr=34.68%  PF=0.83  Sharpe=-1.10  MDD=24.56%  trades=124  regimes=1/3
+   params={'fast': 20, 'slow': 50}  score=0.523  wr=34.96%  PF=0.82  Sharpe=-1.12  MDD=24.56%  trades=123  regimes=0/1
      flags: regime_failure
-   params={'fast': 30, 'slow': 50}  score=0.433  wr=29.13%  PF=0.87  Sharpe=-0.81  MDD=26.91%  trades=127  regimes=1/4
+   params={'fast': 30, 'slow': 50}  score=0.383  wr=29.13%  PF=0.87  Sharpe=-0.83  MDD=26.91%  trades=127  regimes=0/3
      flags: regime_failure
-   params={'fast': 5, 'slow': 50}  score=0.363  wr=25.16%  PF=0.56  Sharpe=-3.12  MDD=32.36%  trades=155  regimes=0/3
+   params={'fast': 10, 'slow': 50}  score=0.318  wr=29.41%  PF=0.69  Sharpe=-2.04  MDD=27.63%  trades=136  regimes=0/1
      flags: regime_failure
 
 >> donchian_breakout ù top 3 of 15 variants:
-   params={'lookback': 10, 'exit_lookback': 5}  score=0.761  wr=36.84%  PF=0.85  Sharpe=-1.03  MDD=13.12%  trades=152  regimes=2/4
+   params={'lookback': 10, 'exit_lookback': 5}  score=0.816  wr=36.84%  PF=0.84  Sharpe=-1.10  MDD=13.47%  trades=152  regimes=2/4
      flags: regime_failure
-   params={'lookback': 20, 'exit_lookback': 5}  score=0.539  wr=31.15%  PF=0.67  Sharpe=-2.59  MDD=21.27%  trades=122  regimes=0/2
+   params={'lookback': 20, 'exit_lookback': 5}  score=0.557  wr=31.15%  PF=0.68  Sharpe=-2.55  MDD=21.27%  trades=122  regimes=0/2
      flags: regime_failure
-   params={'lookback': 10, 'exit_lookback': 10}  score=0.445  wr=38.14%  PF=0.83  Sharpe=-1.17  MDD=20.14%  trades=118  regimes=0/2
+   params={'lookback': 10, 'exit_lookback': 10}  score=0.474  wr=37.82%  PF=0.82  Sharpe=-1.26  MDD=20.14%  trades=119  regimes=0/3
      flags: regime_failure
 
 >> rsi_mean_reverse ù top 3 of 64 variants:
-   params={'period': 14, 'oversold': 35, 'overbought': 70}  score=1.453  wr=55.46%  PF=1.31  Sharpe=1.96  MDD=9.29%  trades=119  regimes=2/4
+   params={'period': 14, 'oversold': 35, 'overbought': 70}  score=1.120  wr=58.12%  PF=1.43  Sharpe=2.60  MDD=5.80%  trades=117  regimes=1/4
      flags: regime_failure
-   params={'period': 14, 'oversold': 35, 'overbought': 65}  score=1.182  wr=54.17%  PF=1.09  Sharpe=0.66  MDD=10.62%  trades=144  regimes=1/4
-     flags: regime_failure
-   params={'period': 7, 'oversold': 25, 'overbought': 80}  score=1.097  wr=61.76%  PF=1.14  Sharpe=0.97  MDD=8.06%  trades=136  regimes=1/5
-     flags: regime_failure
+   params={'period': 14, 'oversold': 25, 'overbought': 70}  score=1.097  wr=51.95%  PF=1.21  Sharpe=1.41  MDD=4.35%  trades=77  regimes=1/1
+   params={'period': 14, 'oversold': 30, 'overbought': 70}  score=1.036  wr=54.44%  PF=1.31  Sharpe=2.01  MDD=4.48%  trades=90  regimes=1/1
 
 >> regime_gated_rsi ù top 3 of 972 variants:
-   params={'rsi_period': 7, 'oversold': 25, 'overbought': 80, 'trend_ma': 100, 'slope_window': 20, 'trend_threshold': 0.0005}  score=1.114  wr=62.76%  PF=1.13  Sharpe=0.69  MDD=3.48%  trades=145  regimes=1/3
+   params={'rsi_period': 7, 'oversold': 30, 'overbought': 75, 'trend_ma': 200, 'slope_window': 20, 'trend_threshold': 0.0005}  score=0.926  wr=65.27%  PF=0.96  Sharpe=-0.25  MDD=4.91%  trades=239  regimes=2/5
      flags: regime_failure
-   params={'rsi_period': 7, 'oversold': 25, 'overbought': 80, 'trend_ma': 100, 'slope_window': 20, 'trend_threshold': 0.001}  score=1.114  wr=62.84%  PF=1.11  Sharpe=0.56  MDD=3.48%  trades=148  regimes=1/3
+   params={'rsi_period': 7, 'oversold': 30, 'overbought': 75, 'trend_ma': 200, 'slope_window': 20, 'trend_threshold': 0.001}  score=0.926  wr=65.27%  PF=0.96  Sharpe=-0.25  MDD=4.91%  trades=239  regimes=2/5
      flags: regime_failure
-   params={'rsi_period': 7, 'oversold': 25, 'overbought': 80, 'trend_ma': 100, 'slope_window': 20, 'trend_threshold': 0.002}  score=1.114  wr=62.84%  PF=1.11  Sharpe=0.56  MDD=3.48%  trades=148  regimes=1/3
+   params={'rsi_period': 7, 'oversold': 30, 'overbought': 75, 'trend_ma': 200, 'slope_window': 20, 'trend_threshold': 0.002}  score=0.926  wr=65.27%  PF=0.96  Sharpe=-0.25  MDD=4.91%  trades=239  regimes=2/5
      flags: regime_failure
 
 >> ts_momentum ù top 3 of 5 variants:
-   params={'lookback': 20}  score=0.480  wr=27.66%  PF=0.67  Sharpe=-2.16  MDD=34.82%  trades=282  regimes=3/5
+   params={'lookback': 20}  score=0.464  wr=27.66%  PF=0.67  Sharpe=-2.13  MDD=34.82%  trades=282  regimes=3/5
      flags: regime_failure
-   params={'lookback': 60}  score=0.276  wr=27.65%  PF=0.63  Sharpe=-2.34  MDD=32.26%  trades=170  regimes=0/3
+   params={'lookback': 120}  score=0.331  wr=26.67%  PF=0.73  Sharpe=-1.57  MDD=19.90%  trades=120  regimes=1/2
      flags: regime_failure
-   params={'lookback': 120}  score=0.253  wr=26.45%  PF=0.73  Sharpe=-1.58  MDD=19.90%  trades=121  regimes=1/2
+   params={'lookback': 60}  score=0.323  wr=27.65%  PF=0.63  Sharpe=-2.35  MDD=32.26%  trades=170  regimes=0/3
      flags: regime_failure
 ------------------------------------------------------------------------
 OVERALL WINNER: rsi_mean_reverse {'period': 14, 'oversold': 35, 'overbought': 70}
-  win rate     : 55.46%  [44.54%, 64.71%]
-  profit factor: 1.306  [0.885, 1.875]
-  Sharpe (ann) : 0.583  [-0.115, 1.302]
+  win rate     : 58.12%  [51.26%, 65.81%]
+  profit factor: 1.426  [1.055, 1.939]
+  Sharpe (ann) : 0.758  [0.058, 1.440]
   Deflated SR p: 1.000
-  notes        : Profit factor lower CI is below 1 ù edge is not statistically established.
+  notes        : All checks passed.
 ========================================================================
-2026-08-11 02:01:02,693 ERROR   run_portfolio                       :: Gate fail: PF_lo=0.885 <= 1.00
-2026-08-11 02:01:02,693 ERROR   run_portfolio                       :: Gate failed for USD_JPY. Skipping this symbol.
-2026-08-11 02:01:02,693 INFO    run_portfolio                       :: Optimizing AUD_USD with strategies=['ma_crossover', 'donchian_breakout', 'rsi_mean_reverse', 'regime_gated_rsi', 'ts_momentum'] ...
-2026-08-11 02:01:02,693 INFO    oandapyV20.oandapyV20               :: performing request https://api-fxpractice.oanda.com/v3/instruments/AUD_USD/candles
-2026-08-11 02:01:21,759 INFO    run_portfolio                       :: Optimization complete for AUD_USD
+2026-08-12 02:01:08,601 INFO    run_portfolio                       :: Optimizing AUD_USD with strategies=['ma_crossover', 'donchian_breakout', 'rsi_mean_reverse', 'regime_gated_rsi', 'ts_momentum'] ...
+2026-08-12 02:01:08,601 INFO    oandapyV20.oandapyV20               :: performing request https://api-fxpractice.oanda.com/v3/instruments/AUD_USD/candles
+2026-08-12 02:01:29,379 INFO    run_portfolio                       :: Optimization complete for AUD_USD
 ========================================================================
 OPTIMIZATION REPORT ù AUD_USD 4h  (fx)
 Bars analysed: 2999
 ------------------------------------------------------------------------
 Regime distribution:
-  bull/low_vol               33.1%
-  bear/high_vol              18.8%
-  bear/low_vol               18.4%
-  bull/high_vol              17.0%
-  range/low_vol              10.8%
+  bull/low_vol               33.4%
+  bear/high_vol              18.9%
+  bear/low_vol               18.1%
+  bull/high_vol              16.9%
+  range/low_vol              10.9%
   range/high_vol              1.8%
 ------------------------------------------------------------------------
 
 >> ma_crossover ù top 3 of 20 variants:
-   params={'fast': 20, 'slow': 50}  score=0.791  wr=36.72%  PF=0.81  Sharpe=-1.15  MDD=23.25%  trades=128  regimes=0/2
+   params={'fast': 20, 'slow': 50}  score=0.674  wr=37.01%  PF=0.82  Sharpe=-1.06  MDD=23.25%  trades=127  regimes=0/2
      flags: regime_failure
-   params={'fast': 50, 'slow': 100}  score=0.665  wr=32.89%  PF=1.02  Sharpe=0.10  MDD=17.69%  trades=76  regimes=1/2
+   params={'fast': 50, 'slow': 100}  score=0.632  wr=32.47%  PF=1.00  Sharpe=0.01  MDD=17.69%  trades=77  regimes=1/2
      flags: regime_failure
-   params={'fast': 10, 'slow': 50}  score=0.615  wr=31.58%  PF=0.67  Sharpe=-2.22  MDD=27.50%  trades=133  regimes=0/2
+   params={'fast': 10, 'slow': 50}  score=0.593  wr=31.58%  PF=0.67  Sharpe=-2.28  MDD=27.50%  trades=133  regimes=0/2
      flags: regime_failure
 
 >> donchian_breakout ù top 3 of 15 variants:
-   params={'lookback': 20, 'exit_lookback': 5}  score=0.804  wr=35.09%  PF=0.80  Sharpe=-1.29  MDD=15.71%  trades=114  regimes=1/2
+   params={'lookback': 10, 'exit_lookback': 5}  score=0.710  wr=32.26%  PF=0.66  Sharpe=-2.53  MDD=26.75%  trades=155  regimes=1/3
      flags: regime_failure
-   params={'lookback': 10, 'exit_lookback': 10}  score=0.745  wr=25.78%  PF=0.55  Sharpe=-3.59  MDD=32.75%  trades=128  regimes=0/2
+   params={'lookback': 10, 'exit_lookback': 10}  score=0.708  wr=25.78%  PF=0.55  Sharpe=-3.58  MDD=32.75%  trades=128  regimes=0/2
      flags: regime_failure
-   params={'lookback': 10, 'exit_lookback': 5}  score=0.742  wr=32.26%  PF=0.66  Sharpe=-2.52  MDD=26.69%  trades=155  regimes=1/3
+   params={'lookback': 20, 'exit_lookback': 5}  score=0.670  wr=35.40%  PF=0.81  Sharpe=-1.26  MDD=15.71%  trades=113  regimes=0/2
      flags: regime_failure
 
 >> rsi_mean_reverse ù top 3 of 64 variants:
-   params={'period': 7, 'oversold': 25, 'overbought': 80}  score=0.935  wr=62.04%  PF=1.15  Sharpe=0.98  MDD=10.31%  trades=108  regimes=1/3
+   params={'period': 14, 'oversold': 35, 'overbought': 70}  score=1.141  wr=53.61%  PF=1.07  Sharpe=0.51  MDD=10.08%  trades=97  regimes=1/3
      flags: regime_failure
-   params={'period': 7, 'oversold': 20, 'overbought': 75}  score=0.797  wr=61.02%  PF=1.03  Sharpe=0.20  MDD=11.82%  trades=118  regimes=1/4
+   params={'period': 7, 'oversold': 20, 'overbought': 70}  score=1.124  wr=59.18%  PF=0.97  Sharpe=-0.19  MDD=12.46%  trades=147  regimes=2/4
      flags: regime_failure
-   params={'period': 7, 'oversold': 20, 'overbought': 70}  score=0.764  wr=58.22%  PF=0.94  Sharpe=-0.41  MDD=12.46%  trades=146  regimes=1/4
+   params={'period': 14, 'oversold': 35, 'overbought': 65}  score=0.954  wr=55.73%  PF=1.10  Sharpe=0.70  MDD=13.77%  trades=131  regimes=1/3
      flags: regime_failure
 
 >> regime_gated_rsi ù top 3 of 972 variants:
-   params={'rsi_period': 7, 'oversold': 25, 'overbought': 80, 'trend_ma': 100, 'slope_window': 10, 'trend_threshold': 0.005}  score=2.298  wr=68.03%  PF=1.47  Sharpe=2.25  MDD=3.02%  trades=122  regimes=1/2
+   params={'rsi_period': 7, 'oversold': 25, 'overbought': 80, 'trend_ma': 100, 'slope_window': 20, 'trend_threshold': 0.005}  score=3.201  wr=68.03%  PF=1.47  Sharpe=2.25  MDD=3.02%  trades=122  regimes=1/2
      flags: regime_failure
-   params={'rsi_period': 7, 'oversold': 25, 'overbought': 80, 'trend_ma': 100, 'slope_window': 10, 'trend_threshold': 0.002}  score=2.298  wr=68.03%  PF=1.47  Sharpe=2.25  MDD=3.02%  trades=122  regimes=1/2
+   params={'rsi_period': 7, 'oversold': 25, 'overbought': 80, 'trend_ma': 100, 'slope_window': 20, 'trend_threshold': 0.002}  score=3.201  wr=68.03%  PF=1.47  Sharpe=2.25  MDD=3.02%  trades=122  regimes=1/2
      flags: regime_failure
-   params={'rsi_period': 7, 'oversold': 25, 'overbought': 80, 'trend_ma': 100, 'slope_window': 10, 'trend_threshold': 0.001}  score=2.298  wr=68.03%  PF=1.47  Sharpe=2.25  MDD=3.02%  trades=122  regimes=1/2
+   params={'rsi_period': 7, 'oversold': 25, 'overbought': 80, 'trend_ma': 100, 'slope_window': 20, 'trend_threshold': 0.001}  score=3.201  wr=68.03%  PF=1.47  Sharpe=2.25  MDD=3.02%  trades=122  regimes=1/2
      flags: regime_failure
 
 >> ts_momentum ù top 3 of 5 variants:
-   params={'lookback': 20}  score=0.719  wr=24.69%  PF=0.58  Sharpe=-2.79  MDD=41.36%  trades=324  regimes=2/4
+   params={'lookback': 20}  score=0.653  wr=24.31%  PF=0.57  Sharpe=-2.83  MDD=41.36%  trades=325  regimes=2/4
      flags: regime_failure
-   params={'lookback': 120}  score=0.373  wr=30.71%  PF=0.86  Sharpe=-0.54  MDD=22.22%  trades=140  regimes=0/2
+   params={'lookback': 120}  score=0.392  wr=30.71%  PF=0.86  Sharpe=-0.52  MDD=22.22%  trades=140  regimes=0/2
      flags: regime_failure
-   params={'lookback': 60}  score=0.342  wr=27.45%  PF=0.54  Sharpe=-3.01  MDD=39.16%  trades=204  regimes=0/3
+   params={'lookback': 60}  score=0.271  wr=27.45%  PF=0.54  Sharpe=-3.03  MDD=39.16%  trades=204  regimes=0/3
      flags: regime_failure
 ------------------------------------------------------------------------
-OVERALL WINNER: regime_gated_rsi {'rsi_period': 7, 'oversold': 25, 'overbought': 80, 'trend_ma': 100, 'slope_window': 10, 'trend_threshold': 0.005}
-  win rate     : 68.03%  [59.02%, 77.87%]
-  profit factor: 1.470  [0.937, 2.432]
-  Sharpe (ann) : 0.754  [0.039, 1.464]
+OVERALL WINNER: regime_gated_rsi {'rsi_period': 7, 'oversold': 25, 'overbought': 80, 'trend_ma': 100, 'slope_window': 20, 'trend_threshold': 0.005}
+  win rate     : 68.03%  [58.20%, 77.05%]
+  profit factor: 1.470  [0.975, 2.463]
+  Sharpe (ann) : 0.754  [0.064, 1.541]
   Deflated SR p: 0.989
   notes        : Profit factor lower CI is below 1 ù edge is not statistically established.
 ========================================================================
-2026-08-11 02:01:21,834 ERROR   run_portfolio                       :: Gate fail: PF_lo=0.937 <= 1.00
-2026-08-11 02:01:21,834 ERROR   run_portfolio                       :: Gate failed for AUD_USD. Skipping this symbol.
-2026-08-11 02:01:21,834 INFO    run_portfolio                       :: Optimizing USD_CAD with strategies=['ma_crossover', 'donchian_breakout', 'rsi_mean_reverse', 'regime_gated_rsi', 'ts_momentum'] ...
-2026-08-11 02:01:21,834 INFO    oandapyV20.oandapyV20               :: performing request https://api-fxpractice.oanda.com/v3/instruments/USD_CAD/candles
-2026-08-11 02:01:41,254 INFO    run_portfolio                       :: Optimization complete for USD_CAD
+2026-08-12 02:01:29,456 ERROR   run_portfolio                       :: Gate fail: PF_lo=0.975 <= 1.00
+2026-08-12 02:01:29,456 ERROR   run_portfolio                       :: Gate failed for AUD_USD. Skipping this symbol.
+2026-08-12 02:01:29,456 INFO    run_portfolio                       :: Optimizing USD_CAD with strategies=['ma_crossover', 'donchian_breakout', 'rsi_mean_reverse', 'regime_gated_rsi', 'ts_momentum'] ...
+2026-08-12 02:01:29,456 INFO    oandapyV20.oandapyV20               :: performing request https://api-fxpractice.oanda.com/v3/instruments/USD_CAD/candles
+2026-08-12 02:01:51,790 INFO    run_portfolio                       :: Optimization complete for USD_CAD
 ========================================================================
 OPTIMIZATION REPORT ù USD_CAD 4h  (fx)
 Bars analysed: 2999
 ------------------------------------------------------------------------
 Regime distribution:
   bull/low_vol               31.2%
-  bear/low_vol               26.2%
-  bull/high_vol              15.8%
-  bear/high_vol              11.6%
-  range/low_vol              11.2%
-  range/high_vol              4.0%
+  bear/low_vol               26.4%
+  bull/high_vol              15.6%
+  bear/high_vol              11.7%
+  range/low_vol              11.1%
+  range/high_vol              4.1%
 ------------------------------------------------------------------------
 
 >> ma_crossover ù top 3 of 20 variants:
-   params={'fast': 20, 'slow': 50}  score=0.637  wr=27.19%  PF=0.93  Sharpe=-0.36  MDD=26.92%  trades=114  regimes=0/1
+   params={'fast': 20, 'slow': 50}  score=0.640  wr=26.96%  PF=0.93  Sharpe=-0.38  MDD=26.92%  trades=115  regimes=0/1
      flags: regime_failure
-   params={'fast': 5, 'slow': 100}  score=0.419  wr=27.06%  PF=1.25  Sharpe=1.01  MDD=20.40%  trades=85  regimes=0/1
+   params={'fast': 5, 'slow': 100}  score=0.494  wr=27.06%  PF=1.24  Sharpe=1.01  MDD=20.40%  trades=85  regimes=0/1
      flags: regime_failure
-   params={'fast': 10, 'slow': 100}  score=0.328  wr=29.17%  PF=1.45  Sharpe=1.56  MDD=18.67%  trades=72  regimes=0/1
+   params={'fast': 10, 'slow': 100}  score=0.407  wr=29.17%  PF=1.45  Sharpe=1.56  MDD=18.67%  trades=72  regimes=0/1
      flags: regime_failure
 
 >> donchian_breakout ù top 3 of 15 variants:
-   params={'lookback': 10, 'exit_lookback': 5}  score=0.883  wr=38.17%  PF=1.06  Sharpe=0.36  MDD=16.23%  trades=131  regimes=0/1
+   params={'lookback': 10, 'exit_lookback': 5}  score=0.889  wr=38.17%  PF=1.08  Sharpe=0.45  MDD=16.23%  trades=131  regimes=0/1
      flags: regime_failure
-   params={'lookback': 20, 'exit_lookback': 5}  score=0.798  wr=36.45%  PF=1.12  Sharpe=0.64  MDD=17.25%  trades=107  regimes=0/1
+   params={'lookback': 10, 'exit_lookback': 10}  score=0.759  wr=38.10%  PF=1.28  Sharpe=1.43  MDD=12.63%  trades=105  regimes=0/1
      flags: regime_failure
-   params={'lookback': 10, 'exit_lookback': 10}  score=0.765  wr=37.04%  PF=1.21  Sharpe=1.09  MDD=12.63%  trades=108  regimes=0/1
+   params={'lookback': 20, 'exit_lookback': 5}  score=0.699  wr=37.38%  PF=1.12  Sharpe=0.68  MDD=17.25%  trades=107  regimes=0/1
      flags: regime_failure
 
 >> rsi_mean_reverse ù top 3 of 64 variants:
-   params={'period': 21, 'oversold': 35, 'overbought': 70}  score=0.996  wr=45.21%  PF=0.95  Sharpe=-0.39  MDD=11.26%  trades=73  regimes=0/1
+   params={'period': 7, 'oversold': 30, 'overbought': 80}  score=0.698  wr=52.35%  PF=0.73  Sharpe=-2.23  MDD=18.71%  trades=149  regimes=0/3
      flags: regime_failure
-   params={'period': 28, 'oversold': 35, 'overbought': 65}  score=0.763  wr=37.14%  PF=0.80  Sharpe=-1.66  MDD=13.48%  trades=70  regimes=0/2
+   params={'period': 7, 'oversold': 30, 'overbought': 70}  score=0.636  wr=54.17%  PF=0.71  Sharpe=-2.42  MDD=24.27%  trades=216  regimes=0/3
      flags: regime_failure
-   params={'period': 21, 'oversold': 35, 'overbought': 65}  score=0.693  wr=39.80%  PF=0.75  Sharpe=-2.19  MDD=16.91%  trades=98  regimes=2/3
+   params={'period': 7, 'oversold': 30, 'overbought': 75}  score=0.619  wr=54.40%  PF=0.77  Sharpe=-1.79  MDD=18.45%  trades=182  regimes=0/3
      flags: regime_failure
 
 >> regime_gated_rsi ù top 3 of 972 variants:
-   params={'rsi_period': 7, 'oversold': 20, 'overbought': 70, 'trend_ma': 200, 'slope_window': 20, 'trend_threshold': 0.0005}  score=2.617  wr=58.10%  PF=0.85  Sharpe=-0.91  MDD=6.10%  trades=210  regimes=1/1
-   params={'rsi_period': 7, 'oversold': 20, 'overbought': 70, 'trend_ma': 200, 'slope_window': 20, 'trend_threshold': 0.001}  score=2.617  wr=58.10%  PF=0.85  Sharpe=-0.91  MDD=6.10%  trades=210  regimes=1/1
-   params={'rsi_period': 7, 'oversold': 20, 'overbought': 70, 'trend_ma': 200, 'slope_window': 20, 'trend_threshold': 0.002}  score=2.617  wr=58.10%  PF=0.85  Sharpe=-0.91  MDD=6.10%  trades=210  regimes=1/1
+   params={'rsi_period': 7, 'oversold': 20, 'overbought': 70, 'trend_ma': 200, 'slope_window': 20, 'trend_threshold': 0.005}  score=2.756  wr=57.89%  PF=0.84  Sharpe=-0.93  MDD=6.10%  trades=209  regimes=1/1
+   params={'rsi_period': 7, 'oversold': 20, 'overbought': 70, 'trend_ma': 200, 'slope_window': 20, 'trend_threshold': 0.002}  score=2.756  wr=57.89%  PF=0.84  Sharpe=-0.93  MDD=6.10%  trades=209  regimes=1/1
+   params={'rsi_period': 7, 'oversold': 20, 'overbought': 70, 'trend_ma': 200, 'slope_window': 20, 'trend_threshold': 0.001}  score=2.756  wr=57.89%  PF=0.84  Sharpe=-0.93  MDD=6.10%  trades=209  regimes=1/1
 
 >> ts_momentum ù top 3 of 5 variants:
-   params={'lookback': 252}  score=0.881  wr=23.17%  PF=0.97  Sharpe=-0.14  MDD=14.12%  trades=82  regimes=0/2
+   params={'lookback': 252}  score=0.967  wr=24.39%  PF=0.98  Sharpe=-0.10  MDD=14.12%  trades=82  regimes=0/1
      flags: regime_failure
-   params={'lookback': 20}  score=0.754  wr=26.22%  PF=0.77  Sharpe=-1.27  MDD=29.69%  trades=286  regimes=2/4
+   params={'lookback': 20}  score=0.752  wr=26.41%  PF=0.78  Sharpe=-1.22  MDD=29.69%  trades=284  regimes=2/4
      flags: regime_failure
-   params={'lookback': 60}  score=0.529  wr=23.46%  PF=0.86  Sharpe=-0.65  MDD=26.46%  trades=162  regimes=1/3
+   params={'lookback': 60}  score=0.554  wr=23.60%  PF=0.88  Sharpe=-0.56  MDD=26.46%  trades=161  regimes=1/3
      flags: regime_failure
 ------------------------------------------------------------------------
-OVERALL WINNER: regime_gated_rsi {'rsi_period': 7, 'oversold': 20, 'overbought': 70, 'trend_ma': 200, 'slope_window': 20, 'trend_threshold': 0.0005}
-  win rate     : 58.10%  [53.33%, 63.33%]
-  profit factor: 0.847  [0.631, 1.129]
-  Sharpe (ann) : 0.064  [-0.594, 0.690]
-  Deflated SR p: 0.010
+OVERALL WINNER: regime_gated_rsi {'rsi_period': 7, 'oversold': 20, 'overbought': 70, 'trend_ma': 200, 'slope_window': 20, 'trend_threshold': 0.005}
+  win rate     : 57.89%  [53.10%, 63.16%]
+  profit factor: 0.844  [0.628, 1.135]
+  Sharpe (ann) : 0.054  [-0.579, 0.736]
+  Deflated SR p: 0.007
   notes        : Profit factor lower CI is below 1 ù edge is not statistically established. Deflated Sharpe probability < 0.95 ù likely overfit.
 ========================================================================
-2026-08-11 02:01:41,339 ERROR   run_portfolio                       :: Gate fail: PF_lo=0.631 <= 1.00
-2026-08-11 02:01:41,339 ERROR   run_portfolio                       :: Gate failed for USD_CAD. Skipping this symbol.
-2026-08-11 02:01:41,339 INFO    run_portfolio                       :: Optimizing NZD_USD with strategies=['ma_crossover', 'donchian_breakout', 'rsi_mean_reverse', 'regime_gated_rsi', 'ts_momentum'] ...
-2026-08-11 02:01:41,339 INFO    oandapyV20.oandapyV20               :: performing request https://api-fxpractice.oanda.com/v3/instruments/NZD_USD/candles
-2026-08-11 02:02:00,105 INFO    run_portfolio                       :: Optimization complete for NZD_USD
+2026-08-12 02:01:51,900 ERROR   run_portfolio                       :: Gate fail: PF_lo=0.628 <= 1.00
+2026-08-12 02:01:51,901 ERROR   run_portfolio                       :: Gate failed for USD_CAD. Skipping this symbol.
+2026-08-12 02:01:51,901 INFO    run_portfolio                       :: Optimizing NZD_USD with strategies=['ma_crossover', 'donchian_breakout', 'rsi_mean_reverse', 'regime_gated_rsi', 'ts_momentum'] ...
+2026-08-12 02:01:51,901 INFO    oandapyV20.oandapyV20               :: performing request https://api-fxpractice.oanda.com/v3/instruments/NZD_USD/candles
+2026-08-12 02:02:13,290 INFO    run_portfolio                       :: Optimization complete for NZD_USD
 ========================================================================
 OPTIMIZATION REPORT ù NZD_USD 4h  (fx)
 Bars analysed: 2999
 ------------------------------------------------------------------------
 Regime distribution:
-  bear/low_vol               28.9%
-  bull/low_vol               27.5%
-  bear/high_vol              20.0%
+  bear/low_vol               28.6%
+  bull/low_vol               27.6%
+  bear/high_vol              20.1%
   bull/high_vol              12.2%
   range/low_vol              10.7%
   range/high_vol              0.7%
 ------------------------------------------------------------------------
 
 >> ma_crossover ù top 3 of 20 variants:
-   params={'fast': 20, 'slow': 50}  score=0.776  wr=32.31%  PF=0.58  Sharpe=-3.06  MDD=32.43%  trades=130  regimes=0/1
+   params={'fast': 5, 'slow': 50}  score=0.635  wr=29.29%  PF=0.71  Sharpe=-1.87  MDD=29.56%  trades=140  regimes=2/3
      flags: regime_failure
-   params={'fast': 30, 'slow': 50}  score=0.676  wr=32.12%  PF=0.61  Sharpe=-2.76  MDD=32.27%  trades=137  regimes=0/3
+   params={'fast': 30, 'slow': 50}  score=0.608  wr=31.62%  PF=0.61  Sharpe=-2.71  MDD=32.27%  trades=136  regimes=0/3
      flags: regime_failure
-   params={'fast': 10, 'slow': 50}  score=0.632  wr=33.06%  PF=0.85  Sharpe=-0.86  MDD=19.57%  trades=121  regimes=0/2
+   params={'fast': 20, 'slow': 50}  score=0.591  wr=31.78%  PF=0.59  Sharpe=-3.02  MDD=32.43%  trades=129  regimes=0/2
      flags: regime_failure
 
 >> donchian_breakout ù top 3 of 15 variants:
-   params={'lookback': 10, 'exit_lookback': 5}  score=0.884  wr=37.33%  PF=0.87  Sharpe=-0.77  MDD=15.15%  trades=150  regimes=1/4
+   params={'lookback': 10, 'exit_lookback': 5}  score=0.892  wr=37.33%  PF=0.87  Sharpe=-0.80  MDD=15.15%  trades=150  regimes=1/4
      flags: regime_failure
-   params={'lookback': 10, 'exit_lookback': 10}  score=0.639  wr=32.23%  PF=0.79  Sharpe=-1.35  MDD=18.20%  trades=121  regimes=1/3
+   params={'lookback': 10, 'exit_lookback': 10}  score=0.581  wr=31.40%  PF=0.79  Sharpe=-1.37  MDD=18.20%  trades=121  regimes=1/4
      flags: regime_failure
-   params={'lookback': 10, 'exit_lookback': 20}  score=0.376  wr=25.00%  PF=0.61  Sharpe=-2.98  MDD=29.37%  trades=96  regimes=0/1
+   params={'lookback': 10, 'exit_lookback': 20}  score=0.357  wr=25.26%  PF=0.64  Sharpe=-2.69  MDD=29.37%  trades=95  regimes=0/1
      flags: regime_failure
 
 >> rsi_mean_reverse ù top 3 of 64 variants:
-   params={'period': 7, 'oversold': 25, 'overbought': 70}  score=0.938  wr=60.73%  PF=1.02  Sharpe=0.12  MDD=9.48%  trades=191  regimes=1/3
+   params={'period': 7, 'oversold': 20, 'overbought': 80}  score=0.957  wr=57.47%  PF=0.89  Sharpe=-0.84  MDD=12.72%  trades=87  regimes=1/2
      flags: regime_failure
-   params={'period': 7, 'oversold': 25, 'overbought': 65}  score=0.872  wr=60.68%  PF=0.97  Sharpe=-0.19  MDD=11.94%  trades=234  regimes=3/4
+   params={'period': 14, 'oversold': 35, 'overbought': 65}  score=0.815  wr=51.75%  PF=0.93  Sharpe=-0.56  MDD=11.16%  trades=143  regimes=0/3
      flags: regime_failure
-   params={'period': 7, 'oversold': 25, 'overbought': 75}  score=0.842  wr=58.60%  PF=0.99  Sharpe=-0.07  MDD=10.29%  trades=157  regimes=1/3
+   params={'period': 7, 'oversold': 25, 'overbought': 70}  score=0.810  wr=60.42%  PF=1.00  Sharpe=0.03  MDD=9.48%  trades=192  regimes=1/3
      flags: regime_failure
 
 >> regime_gated_rsi ù top 3 of 972 variants:
-   params={'rsi_period': 7, 'oversold': 25, 'overbought': 75, 'trend_ma': 150, 'slope_window': 40, 'trend_threshold': 0.005}  score=0.750  wr=60.57%  PF=0.64  Sharpe=-2.60  MDD=17.55%  trades=175  regimes=0/1
+   params={'rsi_period': 7, 'oversold': 25, 'overbought': 75, 'trend_ma': 150, 'slope_window': 40, 'trend_threshold': 0.0005}  score=0.821  wr=60.57%  PF=0.64  Sharpe=-2.60  MDD=17.55%  trades=175  regimes=0/1
      flags: regime_failure
-   params={'rsi_period': 7, 'oversold': 25, 'overbought': 75, 'trend_ma': 150, 'slope_window': 40, 'trend_threshold': 0.002}  score=0.750  wr=60.57%  PF=0.64  Sharpe=-2.60  MDD=17.55%  trades=175  regimes=0/1
+   params={'rsi_period': 7, 'oversold': 25, 'overbought': 75, 'trend_ma': 150, 'slope_window': 40, 'trend_threshold': 0.001}  score=0.821  wr=60.57%  PF=0.64  Sharpe=-2.60  MDD=17.55%  trades=175  regimes=0/1
      flags: regime_failure
-   params={'rsi_period': 7, 'oversold': 25, 'overbought': 75, 'trend_ma': 150, 'slope_window': 40, 'trend_threshold': 0.001}  score=0.750  wr=60.57%  PF=0.64  Sharpe=-2.60  MDD=17.55%  trades=175  regimes=0/1
+   params={'rsi_period': 7, 'oversold': 25, 'overbought': 75, 'trend_ma': 150, 'slope_window': 40, 'trend_threshold': 0.002}  score=0.821  wr=60.57%  PF=0.64  Sharpe=-2.60  MDD=17.55%  trades=175  regimes=0/1
      flags: regime_failure
 
 >> ts_momentum ù top 3 of 5 variants:
-   params={'lookback': 20}  score=0.920  wr=28.43%  PF=0.66  Sharpe=-2.17  MDD=40.81%  trades=313  regimes=1/4
+   params={'lookback': 20}  score=0.902  wr=28.03%  PF=0.65  Sharpe=-2.24  MDD=40.81%  trades=314  regimes=1/4
      flags: regime_failure
-   params={'lookback': 252}  score=0.476  wr=35.62%  PF=0.70  Sharpe=-1.83  MDD=15.21%  trades=73  regimes=0/2
+   params={'lookback': 60}  score=0.413  wr=23.73%  PF=0.61  Sharpe=-2.47  MDD=29.13%  trades=177  regimes=0/2
      flags: regime_failure
-   params={'lookback': 60}  score=0.429  wr=23.60%  PF=0.61  Sharpe=-2.48  MDD=29.13%  trades=178  regimes=0/2
+   params={'lookback': 252}  score=0.346  wr=36.62%  PF=0.77  Sharpe=-1.26  MDD=15.21%  trades=71  regimes=0/2
      flags: regime_failure
 ------------------------------------------------------------------------
-OVERALL WINNER: rsi_mean_reverse {'period': 7, 'oversold': 25, 'overbought': 70}
-  win rate     : 60.73%  [53.93%, 67.02%]
-  profit factor: 1.017  [0.773, 1.356]
-  Sharpe (ann) : 0.168  [-0.519, 0.897]
-  Deflated SR p: 0.464
+OVERALL WINNER: rsi_mean_reverse {'period': 7, 'oversold': 20, 'overbought': 80}
+  win rate     : 57.47%  [47.13%, 68.97%]
+  profit factor: 0.890  [0.528, 1.502]
+  Sharpe (ann) : -0.101  [-0.839, 0.637]
+  Deflated SR p: 0.000
   notes        : Profit factor lower CI is below 1 ù edge is not statistically established. Deflated Sharpe probability < 0.95 ù likely overfit.
 ========================================================================
-2026-08-11 02:02:00,200 ERROR   run_portfolio                       :: Gate fail: PF_lo=0.773 <= 1.00
-2026-08-11 02:02:00,200 ERROR   run_portfolio                       :: Gate failed for NZD_USD. Skipping this symbol.
-2026-08-11 02:02:00,201 INFO    run_portfolio                       :: Optimizing EUR_JPY with strategies=['ma_crossover', 'donchian_breakout', 'rsi_mean_reverse', 'regime_gated_rsi', 'ts_momentum'] ...
-2026-08-11 02:02:00,201 INFO    oandapyV20.oandapyV20               :: performing request https://api-fxpractice.oanda.com/v3/instruments/EUR_JPY/candles
-2026-08-11 02:02:19,460 INFO    run_portfolio                       :: Optimization complete for EUR_JPY
+2026-08-12 02:02:13,417 ERROR   run_portfolio                       :: Gate fail: PF_lo=0.528 <= 1.00
+2026-08-12 02:02:13,417 ERROR   run_portfolio                       :: Gate failed for NZD_USD. Skipping this symbol.
+2026-08-12 02:02:13,417 INFO    run_portfolio                       :: Optimizing EUR_JPY with strategies=['ma_crossover', 'donchian_breakout', 'rsi_mean_reverse', 'regime_gated_rsi', 'ts_momentum'] ...
+2026-08-12 02:02:13,418 INFO    oandapyV20.oandapyV20               :: performing request https://api-fxpractice.oanda.com/v3/instruments/EUR_JPY/candles
+2026-08-12 02:02:37,437 INFO    run_portfolio                       :: Optimization complete for EUR_JPY
 ========================================================================
 OPTIMIZATION REPORT ù EUR_JPY 4h  (fx)
 Bars analysed: 2999
 ------------------------------------------------------------------------
 Regime distribution:
-  bull/low_vol               49.7%
-  range/low_vol              16.8%
+  bull/low_vol               49.5%
+  range/low_vol              17.0%
   bear/low_vol               12.3%
   bull/high_vol              10.6%
-  bear/high_vol               9.5%
-  range/high_vol              1.1%
+  bear/high_vol               9.7%
+  range/high_vol              0.9%
 ------------------------------------------------------------------------
 
 >> ma_crossover ù top 3 of 20 variants:
-   params={'fast': 20, 'slow': 50}  score=0.610  wr=22.56%  PF=0.48  Sharpe=-3.87  MDD=35.24%  trades=133  regimes=0/3
+   params={'fast': 20, 'slow': 50}  score=0.644  wr=22.39%  PF=0.48  Sharpe=-3.87  MDD=35.31%  trades=134  regimes=0/3
      flags: regime_failure
-   params={'fast': 5, 'slow': 50}  score=0.419  wr=24.43%  PF=0.53  Sharpe=-3.48  MDD=31.29%  trades=131  regimes=0/3
+   params={'fast': 5, 'slow': 50}  score=0.467  wr=25.00%  PF=0.53  Sharpe=-3.46  MDD=31.29%  trades=132  regimes=0/3
      flags: regime_failure
-   params={'fast': 30, 'slow': 50}  score=0.397  wr=27.15%  PF=0.52  Sharpe=-3.46  MDD=35.44%  trades=151  regimes=1/3
+   params={'fast': 30, 'slow': 50}  score=0.395  wr=27.15%  PF=0.52  Sharpe=-3.47  MDD=35.49%  trades=151  regimes=1/3
      flags: regime_failure
 
 >> donchian_breakout ù top 3 of 15 variants:
-   params={'lookback': 20, 'exit_lookback': 5}  score=0.727  wr=24.39%  PF=0.45  Sharpe=-5.10  MDD=28.47%  trades=123  regimes=1/3
+   params={'lookback': 20, 'exit_lookback': 5}  score=0.765  wr=24.39%  PF=0.45  Sharpe=-5.06  MDD=28.47%  trades=123  regimes=1/3
      flags: regime_failure
-   params={'lookback': 10, 'exit_lookback': 5}  score=0.714  wr=32.68%  PF=0.59  Sharpe=-3.52  MDD=25.58%  trades=153  regimes=1/3
+   params={'lookback': 10, 'exit_lookback': 5}  score=0.749  wr=32.68%  PF=0.58  Sharpe=-3.59  MDD=25.58%  trades=153  regimes=2/3
      flags: regime_failure
-   params={'lookback': 10, 'exit_lookback': 10}  score=0.376  wr=26.83%  PF=0.58  Sharpe=-3.48  MDD=28.74%  trades=123  regimes=0/3
+   params={'lookback': 10, 'exit_lookback': 10}  score=0.391  wr=26.83%  PF=0.58  Sharpe=-3.55  MDD=28.74%  trades=123  regimes=0/3
      flags: regime_failure
 
 >> rsi_mean_reverse ù top 3 of 64 variants:
-   params={'period': 14, 'oversold': 35, 'overbought': 70}  score=1.283  wr=58.25%  PF=1.32  Sharpe=1.85  MDD=7.92%  trades=103  regimes=1/2
+   params={'period': 21, 'oversold': 35, 'overbought': 65}  score=1.232  wr=47.30%  PF=1.14  Sharpe=0.90  MDD=9.23%  trades=74  regimes=1/1
+   params={'period': 14, 'oversold': 30, 'overbought': 70}  score=1.045  wr=56.25%  PF=1.30  Sharpe=1.78  MDD=4.64%  trades=80  regimes=1/2
      flags: regime_failure
-   params={'period': 14, 'oversold': 30, 'overbought': 70}  score=1.282  wr=54.88%  PF=1.24  Sharpe=1.44  MDD=6.52%  trades=82  regimes=1/2
+   params={'period': 14, 'oversold': 35, 'overbought': 70}  score=0.961  wr=59.41%  PF=1.37  Sharpe=2.14  MDD=6.07%  trades=101  regimes=1/2
      flags: regime_failure
-   params={'period': 21, 'oversold': 35, 'overbought': 65}  score=1.227  wr=46.05%  PF=1.08  Sharpe=0.54  MDD=9.60%  trades=76  regimes=1/1
 
 >> regime_gated_rsi ù top 3 of 972 variants:
-   params={'rsi_period': 7, 'oversold': 20, 'overbought': 80, 'trend_ma': 100, 'slope_window': 20, 'trend_threshold': 0.005}  score=0.800  wr=69.15%  PF=1.06  Sharpe=0.32  MDD=3.69%  trades=94  regimes=0/1
+   params={'rsi_period': 7, 'oversold': 20, 'overbought': 80, 'trend_ma': 150, 'slope_window': 10, 'trend_threshold': 0.005}  score=0.800  wr=68.42%  PF=1.04  Sharpe=0.22  MDD=3.69%  trades=95  regimes=0/1
      flags: regime_failure
-   params={'rsi_period': 7, 'oversold': 20, 'overbought': 80, 'trend_ma': 100, 'slope_window': 20, 'trend_threshold': 0.002}  score=0.800  wr=69.15%  PF=1.06  Sharpe=0.32  MDD=3.69%  trades=94  regimes=0/1
+   params={'rsi_period': 7, 'oversold': 20, 'overbought': 80, 'trend_ma': 150, 'slope_window': 10, 'trend_threshold': 0.002}  score=0.800  wr=68.42%  PF=1.04  Sharpe=0.22  MDD=3.69%  trades=95  regimes=0/1
      flags: regime_failure
-   params={'rsi_period': 7, 'oversold': 20, 'overbought': 80, 'trend_ma': 100, 'slope_window': 20, 'trend_threshold': 0.001}  score=0.800  wr=69.15%  PF=1.06  Sharpe=0.32  MDD=3.69%  trades=94  regimes=0/1
+   params={'rsi_period': 7, 'oversold': 20, 'overbought': 80, 'trend_ma': 150, 'slope_window': 10, 'trend_threshold': 0.001}  score=0.800  wr=68.42%  PF=1.04  Sharpe=0.22  MDD=3.69%  trades=95  regimes=0/1
      flags: regime_failure
 
 >> ts_momentum ù top 3 of 5 variants:
-   params={'lookback': 20}  score=0.586  wr=26.59%  PF=0.52  Sharpe=-3.63  MDD=47.80%  trades=331  regimes=1/4
+   params={'lookback': 20}  score=0.622  wr=26.59%  PF=0.52  Sharpe=-3.64  MDD=47.80%  trades=331  regimes=1/4
      flags: regime_failure
-   params={'lookback': 60}  score=0.433  wr=24.20%  PF=0.59  Sharpe=-2.35  MDD=30.36%  trades=219  regimes=0/3
+   params={'lookback': 60}  score=0.377  wr=24.20%  PF=0.59  Sharpe=-2.36  MDD=30.36%  trades=219  regimes=0/3
      flags: regime_failure
-   params={'lookback': 252}  score=0.023  wr=21.70%  PF=0.56  Sharpe=-2.36  MDD=22.45%  trades=106  regimes=0/1
+   params={'lookback': 200}  score=0.154  wr=20.91%  PF=0.60  Sharpe=-1.75  MDD=21.75%  trades=110  regimes=0/2
      flags: regime_failure
 ------------------------------------------------------------------------
-OVERALL WINNER: rsi_mean_reverse {'period': 14, 'oversold': 35, 'overbought': 70}
-  win rate     : 58.25%  [47.57%, 67.96%]
-  profit factor: 1.315  [0.943, 1.914]
-  Sharpe (ann) : 0.512  [-0.138, 1.073]
-  Deflated SR p: 1.000
-  notes        : Profit factor lower CI is below 1 ù edge is not statistically established.
+OVERALL WINNER: rsi_mean_reverse {'period': 21, 'oversold': 35, 'overbought': 65}
+  win rate     : 47.30%  [40.54%, 54.05%]
+  profit factor: 1.138  [0.817, 1.521]
+  Sharpe (ann) : 0.241  [-0.438, 0.899]
+  Deflated SR p: 0.481
+  notes        : Profit factor lower CI is below 1 ù edge is not statistically established. Deflated Sharpe probability < 0.95 ù likely overfit.
 ========================================================================
-2026-08-11 02:02:19,535 ERROR   run_portfolio                       :: Gate fail: PF_lo=0.943 <= 1.00
-2026-08-11 02:02:19,535 ERROR   run_portfolio                       :: Gate failed for EUR_JPY. Skipping this symbol.
-2026-08-11 02:02:19,535 INFO    run_portfolio                       :: Optimizing GBP_JPY with strategies=['ma_crossover', 'donchian_breakout', 'rsi_mean_reverse', 'regime_gated_rsi', 'ts_momentum'] ...
-2026-08-11 02:02:19,536 INFO    oandapyV20.oandapyV20               :: performing request https://api-fxpractice.oanda.com/v3/instruments/GBP_JPY/candles
-2026-08-11 02:02:38,624 INFO    run_portfolio                       :: Optimization complete for GBP_JPY
+2026-08-12 02:02:37,522 ERROR   run_portfolio                       :: Gate fail: PF_lo=0.817 <= 1.00
+2026-08-12 02:02:37,522 ERROR   run_portfolio                       :: Gate failed for EUR_JPY. Skipping this symbol.
+2026-08-12 02:02:37,522 INFO    run_portfolio                       :: Optimizing GBP_JPY with strategies=['ma_crossover', 'donchian_breakout', 'rsi_mean_reverse', 'regime_gated_rsi', 'ts_momentum'] ...
+2026-08-12 02:02:37,522 INFO    oandapyV20.oandapyV20               :: performing request https://api-fxpractice.oanda.com/v3/instruments/GBP_JPY/candles
+2026-08-12 02:02:59,182 INFO    run_portfolio                       :: Optimization complete for GBP_JPY
 ========================================================================
 OPTIMIZATION REPORT ù GBP_JPY 4h  (fx)
 Bars analysed: 2999
 ------------------------------------------------------------------------
 Regime distribution:
-  bull/low_vol               49.6%
-  range/low_vol              16.5%
-  bear/low_vol               14.2%
-  bear/high_vol               9.6%
+  bull/low_vol               49.4%
+  range/low_vol              16.8%
+  bear/low_vol               14.1%
+  bear/high_vol               9.8%
   bull/high_vol               8.3%
-  range/high_vol              1.8%
+  range/high_vol              1.5%
 ------------------------------------------------------------------------
 
 >> ma_crossover ù top 3 of 20 variants:
-   params={'fast': 30, 'slow': 50}  score=0.451  wr=33.33%  PF=0.68  Sharpe=-2.45  MDD=30.50%  trades=129  regimes=0/3
+   params={'fast': 30, 'slow': 50}  score=0.498  wr=33.59%  PF=0.68  Sharpe=-2.44  MDD=30.50%  trades=128  regimes=0/3
      flags: regime_failure
-   params={'fast': 5, 'slow': 50}  score=0.388  wr=25.85%  PF=0.52  Sharpe=-3.98  MDD=33.43%  trades=147  regimes=0/3
+   params={'fast': 5, 'slow': 50}  score=0.453  wr=26.53%  PF=0.53  Sharpe=-3.83  MDD=33.43%  trades=147  regimes=0/3
      flags: regime_failure
-   params={'fast': 10, 'slow': 50}  score=0.372  wr=30.07%  PF=0.59  Sharpe=-3.07  MDD=37.23%  trades=143  regimes=0/3
+   params={'fast': 10, 'slow': 50}  score=0.370  wr=30.07%  PF=0.59  Sharpe=-3.10  MDD=37.23%  trades=143  regimes=0/3
      flags: regime_failure
 
 >> donchian_breakout ù top 3 of 15 variants:
-   params={'lookback': 10, 'exit_lookback': 10}  score=0.640  wr=28.93%  PF=0.60  Sharpe=-3.43  MDD=27.49%  trades=121  regimes=0/1
+   params={'lookback': 10, 'exit_lookback': 10}  score=0.672  wr=29.17%  PF=0.61  Sharpe=-3.26  MDD=27.49%  trades=120  regimes=0/1
      flags: regime_failure
-   params={'lookback': 10, 'exit_lookback': 5}  score=0.529  wr=29.19%  PF=0.51  Sharpe=-4.36  MDD=31.92%  trades=161  regimes=0/3
+   params={'lookback': 10, 'exit_lookback': 5}  score=0.568  wr=29.38%  PF=0.52  Sharpe=-4.20  MDD=31.92%  trades=160  regimes=0/3
      flags: regime_failure
-   params={'lookback': 20, 'exit_lookback': 5}  score=0.470  wr=28.12%  PF=0.48  Sharpe=-4.97  MDD=30.26%  trades=128  regimes=0/3
+   params={'lookback': 20, 'exit_lookback': 5}  score=0.542  wr=28.12%  PF=0.48  Sharpe=-4.90  MDD=30.26%  trades=128  regimes=0/3
      flags: regime_failure
 
 >> rsi_mean_reverse ù top 3 of 64 variants:
-   params={'period': 7, 'oversold': 20, 'overbought': 80}  score=1.871  wr=59.14%  PF=0.97  Sharpe=-0.20  MDD=5.42%  trades=93  regimes=1/1
-   params={'period': 14, 'oversold': 35, 'overbought': 70}  score=1.215  wr=59.41%  PF=1.40  Sharpe=2.55  MDD=7.70%  trades=101  regimes=1/1
-   params={'period': 14, 'oversold': 30, 'overbought': 65}  score=1.205  wr=54.31%  PF=1.14  Sharpe=0.96  MDD=7.71%  trades=116  regimes=3/3
+   params={'period': 7, 'oversold': 20, 'overbought': 80}  score=1.324  wr=61.54%  PF=1.04  Sharpe=0.27  MDD=5.15%  trades=91  regimes=1/1
+   params={'period': 14, 'oversold': 30, 'overbought': 65}  score=1.106  wr=55.17%  PF=1.18  Sharpe=1.26  MDD=5.01%  trades=116  regimes=1/2
+     flags: regime_failure
+   params={'period': 14, 'oversold': 35, 'overbought': 70}  score=0.968  wr=61.00%  PF=1.47  Sharpe=2.90  MDD=5.81%  trades=100  regimes=0/1
+     flags: regime_failure
 
 >> regime_gated_rsi ù top 3 of 972 variants:
-   params={'rsi_period': 7, 'oversold': 30, 'overbought': 80, 'trend_ma': 150, 'slope_window': 40, 'trend_threshold': 0.005}  score=0.773  wr=65.48%  PF=0.96  Sharpe=-0.25  MDD=5.32%  trades=168  regimes=1/2
+   params={'rsi_period': 7, 'oversold': 30, 'overbought': 80, 'trend_ma': 100, 'slope_window': 10, 'trend_threshold': 0.0005}  score=0.622  wr=65.68%  PF=0.95  Sharpe=-0.31  MDD=5.32%  trades=169  regimes=1/2
      flags: regime_failure
-   params={'rsi_period': 7, 'oversold': 30, 'overbought': 80, 'trend_ma': 150, 'slope_window': 40, 'trend_threshold': 0.002}  score=0.773  wr=65.48%  PF=0.96  Sharpe=-0.25  MDD=5.32%  trades=168  regimes=1/2
+   params={'rsi_period': 7, 'oversold': 30, 'overbought': 80, 'trend_ma': 100, 'slope_window': 10, 'trend_threshold': 0.001}  score=0.622  wr=65.68%  PF=0.95  Sharpe=-0.31  MDD=5.32%  trades=169  regimes=1/2
      flags: regime_failure
-   params={'rsi_period': 7, 'oversold': 30, 'overbought': 80, 'trend_ma': 150, 'slope_window': 40, 'trend_threshold': 0.001}  score=0.773  wr=65.48%  PF=0.96  Sharpe=-0.25  MDD=5.32%  trades=168  regimes=1/2
+   params={'rsi_period': 7, 'oversold': 30, 'overbought': 80, 'trend_ma': 100, 'slope_window': 10, 'trend_threshold': 0.002}  score=0.622  wr=65.68%  PF=0.95  Sharpe=-0.31  MDD=5.32%  trades=169  regimes=1/2
      flags: regime_failure
 
 >> ts_momentum ù top 3 of 5 variants:
-   params={'lookback': 60}  score=0.494  wr=23.40%  PF=0.53  Sharpe=-3.37  MDD=37.92%  trades=188  regimes=0/2
+   params={'lookback': 60}  score=0.476  wr=23.40%  PF=0.53  Sharpe=-3.41  MDD=37.92%  trades=188  regimes=0/2
      flags: regime_failure
-   params={'lookback': 200}  score=0.432  wr=24.68%  PF=0.40  Sharpe=-4.94  MDD=36.16%  trades=154  regimes=0/2
+   params={'lookback': 200}  score=0.375  wr=24.52%  PF=0.40  Sharpe=-5.00  MDD=36.47%  trades=155  regimes=0/2
      flags: regime_failure
-   params={'lookback': 20}  score=0.334  wr=27.90%  PF=0.53  Sharpe=-3.56  MDD=46.46%  trades=362  regimes=0/4
+   params={'lookback': 20}  score=0.355  wr=27.90%  PF=0.53  Sharpe=-3.56  MDD=46.46%  trades=362  regimes=1/5
      flags: regime_failure
 ------------------------------------------------------------------------
 OVERALL WINNER: rsi_mean_reverse {'period': 7, 'oversold': 20, 'overbought': 80}
-  win rate     : 59.14%  [50.54%, 65.59%]
-  profit factor: 0.972  [0.732, 1.250]
-  Sharpe (ann) : 0.060  [-0.576, 0.740]
-  Deflated SR p: 0.036
+  win rate     : 61.54%  [56.04%, 65.93%]
+  profit factor: 1.038  [0.842, 1.295]
+  Sharpe (ann) : 0.172  [-0.437, 0.776]
+  Deflated SR p: 0.220
   notes        : Profit factor lower CI is below 1 ù edge is not statistically established. Deflated Sharpe probability < 0.95 ù likely overfit.
 ========================================================================
-2026-08-11 02:02:38,703 ERROR   run_portfolio                       :: Gate fail: PF_lo=0.732 <= 1.00
-2026-08-11 02:02:38,704 ERROR   run_portfolio                       :: Gate failed for GBP_JPY. Skipping this symbol.
-2026-08-11 02:02:38,704 INFO    run_portfolio                       :: Optimizing AUD_JPY with strategies=['ma_crossover', 'donchian_breakout', 'rsi_mean_reverse', 'regime_gated_rsi', 'ts_momentum'] ...
-2026-08-11 02:02:38,704 INFO    oandapyV20.oandapyV20               :: performing request https://api-fxpractice.oanda.com/v3/instruments/AUD_JPY/candles
-2026-08-11 02:02:57,599 INFO    run_portfolio                       :: Optimization complete for AUD_JPY
+2026-08-12 02:02:59,364 ERROR   run_portfolio                       :: Gate fail: PF_lo=0.842 <= 1.00
+2026-08-12 02:02:59,364 ERROR   run_portfolio                       :: Gate failed for GBP_JPY. Skipping this symbol.
+2026-08-12 02:02:59,364 INFO    run_portfolio                       :: Optimizing AUD_JPY with strategies=['ma_crossover', 'donchian_breakout', 'rsi_mean_reverse', 'regime_gated_rsi', 'ts_momentum'] ...
+2026-08-12 02:02:59,364 INFO    oandapyV20.oandapyV20               :: performing request https://api-fxpractice.oanda.com/v3/instruments/AUD_JPY/candles
+2026-08-12 02:03:20,853 INFO    run_portfolio                       :: Optimization complete for AUD_JPY
 ========================================================================
 OPTIMIZATION REPORT ù AUD_JPY 4h  (fx)
 Bars analysed: 2999
 ------------------------------------------------------------------------
 Regime distribution:
-  bull/low_vol               45.6%
-  bear/low_vol               17.5%
-  bear/high_vol              13.6%
-  bull/high_vol              12.7%
-  range/low_vol               9.6%
-  range/high_vol              1.1%
+  bull/low_vol               45.2%
+  bear/low_vol               17.4%
+  bear/high_vol              13.9%
+  bull/high_vol              12.8%
+  range/low_vol               9.8%
+  range/high_vol              0.9%
 ------------------------------------------------------------------------
 
 >> ma_crossover ù top 3 of 20 variants:
-   params={'fast': 5, 'slow': 50}  score=0.641  wr=24.48%  PF=0.63  Sharpe=-2.69  MDD=25.46%  trades=143  regimes=0/2
+   params={'fast': 5, 'slow': 50}  score=0.659  wr=25.35%  PF=0.65  Sharpe=-2.54  MDD=25.46%  trades=142  regimes=0/2
      flags: regime_failure
-   params={'fast': 20, 'slow': 50}  score=0.499  wr=33.33%  PF=0.85  Sharpe=-0.99  MDD=15.81%  trades=120  regimes=1/2
+   params={'fast': 20, 'slow': 50}  score=0.485  wr=34.17%  PF=0.86  Sharpe=-0.88  MDD=15.81%  trades=120  regimes=1/2
      flags: regime_failure
-   params={'fast': 30, 'slow': 50}  score=0.368  wr=32.33%  PF=0.62  Sharpe=-2.93  MDD=27.85%  trades=133  regimes=0/2
+   params={'fast': 50, 'slow': 100}  score=0.407  wr=19.74%  PF=0.66  Sharpe=-2.10  MDD=21.48%  trades=76  regimes=0/1
      flags: regime_failure
 
 >> donchian_breakout ù top 3 of 15 variants:
-   params={'lookback': 10, 'exit_lookback': 5}  score=0.899  wr=38.10%  PF=0.88  Sharpe=-0.71  MDD=20.78%  trades=147  regimes=1/2
+   params={'lookback': 20, 'exit_lookback': 5}  score=1.298  wr=33.91%  PF=0.75  Sharpe=-1.74  MDD=19.35%  trades=115  regimes=1/1
+   params={'lookback': 10, 'exit_lookback': 10}  score=0.877  wr=28.45%  PF=0.76  Sharpe=-1.70  MDD=21.07%  trades=116  regimes=1/2
      flags: regime_failure
-   params={'lookback': 10, 'exit_lookback': 10}  score=0.795  wr=29.31%  PF=0.77  Sharpe=-1.58  MDD=21.07%  trades=116  regimes=0/1
-     flags: regime_failure
-   params={'lookback': 20, 'exit_lookback': 5}  score=0.548  wr=33.91%  PF=0.74  Sharpe=-1.81  MDD=19.35%  trades=115  regimes=0/2
+   params={'lookback': 10, 'exit_lookback': 5}  score=0.777  wr=37.41%  PF=0.86  Sharpe=-0.80  MDD=20.78%  trades=147  regimes=1/2
      flags: regime_failure
 
 >> rsi_mean_reverse ù top 3 of 64 variants:
-   params={'period': 14, 'oversold': 35, 'overbought': 70}  score=0.959  wr=53.57%  PF=1.11  Sharpe=0.80  MDD=6.72%  trades=112  regimes=1/2
+   params={'period': 14, 'oversold': 35, 'overbought': 70}  score=1.020  wr=54.05%  PF=1.14  Sharpe=0.98  MDD=5.65%  trades=111  regimes=1/2
      flags: regime_failure
-   params={'period': 14, 'oversold': 35, 'overbought': 75}  score=0.942  wr=57.47%  PF=1.36  Sharpe=2.24  MDD=5.92%  trades=87  regimes=1/2
+   params={'period': 14, 'oversold': 35, 'overbought': 75}  score=0.930  wr=55.68%  PF=1.27  Sharpe=1.73  MDD=7.24%  trades=88  regimes=1/1
+   params={'period': 7, 'oversold': 25, 'overbought': 75}  score=0.924  wr=58.06%  PF=0.97  Sharpe=-0.21  MDD=7.02%  trades=155  regimes=1/2
      flags: regime_failure
-   params={'period': 14, 'oversold': 30, 'overbought': 75}  score=0.831  wr=53.33%  PF=1.18  Sharpe=1.20  MDD=6.24%  trades=60  regimes=1/1
 
 >> regime_gated_rsi ù top 3 of 972 variants:
-   params={'rsi_period': 7, 'oversold': 20, 'overbought': 75, 'trend_ma': 150, 'slope_window': 40, 'trend_threshold': 0.0005}  score=2.070  wr=64.58%  PF=0.97  Sharpe=-0.15  MDD=4.47%  trades=144  regimes=1/2
+   params={'rsi_period': 7, 'oversold': 20, 'overbought': 75, 'trend_ma': 150, 'slope_window': 40, 'trend_threshold': 0.0005}  score=2.360  wr=64.14%  PF=0.96  Sharpe=-0.23  MDD=4.47%  trades=145  regimes=1/2
      flags: regime_failure
-   params={'rsi_period': 7, 'oversold': 20, 'overbought': 75, 'trend_ma': 150, 'slope_window': 40, 'trend_threshold': 0.001}  score=2.070  wr=64.58%  PF=0.97  Sharpe=-0.15  MDD=4.47%  trades=144  regimes=1/2
+   params={'rsi_period': 7, 'oversold': 20, 'overbought': 75, 'trend_ma': 150, 'slope_window': 40, 'trend_threshold': 0.001}  score=2.360  wr=64.14%  PF=0.96  Sharpe=-0.23  MDD=4.47%  trades=145  regimes=1/2
      flags: regime_failure
-   params={'rsi_period': 7, 'oversold': 20, 'overbought': 75, 'trend_ma': 150, 'slope_window': 40, 'trend_threshold': 0.002}  score=2.070  wr=64.58%  PF=0.97  Sharpe=-0.15  MDD=4.47%  trades=144  regimes=1/2
+   params={'rsi_period': 7, 'oversold': 20, 'overbought': 75, 'trend_ma': 150, 'slope_window': 40, 'trend_threshold': 0.002}  score=2.360  wr=64.14%  PF=0.96  Sharpe=-0.23  MDD=4.47%  trades=145  regimes=1/2
      flags: regime_failure
 
 >> ts_momentum ù top 3 of 5 variants:
-   params={'lookback': 20}  score=0.830  wr=33.00%  PF=0.77  Sharpe=-1.32  MDD=22.22%  trades=303  regimes=1/2
+   params={'lookback': 20}  score=0.913  wr=33.00%  PF=0.78  Sharpe=-1.30  MDD=22.22%  trades=303  regimes=2/3
      flags: regime_failure
-   params={'lookback': 60}  score=0.447  wr=29.67%  PF=0.61  Sharpe=-2.63  MDD=27.21%  trades=182  regimes=0/2
+   params={'lookback': 60}  score=0.443  wr=29.67%  PF=0.60  Sharpe=-2.65  MDD=27.21%  trades=182  regimes=0/2
      flags: regime_failure
-   params={'lookback': 120}  score=0.000  wr=30.00%  PF=0.86  Sharpe=-0.62  MDD=15.39%  trades=110  regimes=0/0
+   params={'lookback': 120}  score=0.000  wr=29.46%  PF=0.82  Sharpe=-0.81  MDD=15.39%  trades=112  regimes=0/0
 ------------------------------------------------------------------------
 OVERALL WINNER: regime_gated_rsi {'rsi_period': 7, 'oversold': 20, 'overbought': 75, 'trend_ma': 150, 'slope_window': 40, 'trend_threshold': 0.0005}
-  win rate     : 64.58%  [59.03%, 70.14%]
-  profit factor: 0.973  [0.686, 1.439]
-  Sharpe (ann) : 0.128  [-0.505, 0.790]
-  Deflated SR p: 0.036
+  win rate     : 64.14%  [58.62%, 68.97%]
+  profit factor: 0.961  [0.689, 1.430]
+  Sharpe (ann) : 0.115  [-0.474, 0.798]
+  Deflated SR p: 0.027
   notes        : Profit factor lower CI is below 1 ù edge is not statistically established. Deflated Sharpe probability < 0.95 ù likely overfit.
 ========================================================================
-2026-08-11 02:02:57,675 ERROR   run_portfolio                       :: Gate fail: PF_lo=0.686 <= 1.00
-2026-08-11 02:02:57,675 ERROR   run_portfolio                       :: Gate failed for AUD_JPY. Skipping this symbol.
-2026-08-11 02:02:57,675 INFO    run_portfolio                       :: Optimizing NZD_JPY with strategies=['ma_crossover', 'donchian_breakout', 'rsi_mean_reverse', 'regime_gated_rsi', 'ts_momentum'] ...
-2026-08-11 02:02:57,675 INFO    oandapyV20.oandapyV20               :: performing request https://api-fxpractice.oanda.com/v3/instruments/NZD_JPY/candles
-2026-08-11 02:03:17,947 INFO    run_portfolio                       :: Optimization complete for NZD_JPY
+2026-08-12 02:03:20,932 ERROR   run_portfolio                       :: Gate fail: PF_lo=0.689 <= 1.00
+2026-08-12 02:03:20,932 ERROR   run_portfolio                       :: Gate failed for AUD_JPY. Skipping this symbol.
+2026-08-12 02:03:20,932 INFO    run_portfolio                       :: Optimizing NZD_JPY with strategies=['ma_crossover', 'donchian_breakout', 'rsi_mean_reverse', 'regime_gated_rsi', 'ts_momentum'] ...
+2026-08-12 02:03:20,932 INFO    oandapyV20.oandapyV20               :: performing request https://api-fxpractice.oanda.com/v3/instruments/NZD_JPY/candles
+2026-08-12 02:03:42,482 INFO    run_portfolio                       :: Optimization complete for NZD_JPY
 ========================================================================
 OPTIMIZATION REPORT ù NZD_JPY 4h  (fx)
 Bars analysed: 2999
 ------------------------------------------------------------------------
 Regime distribution:
-  bull/low_vol               40.2%
-  bear/low_vol               22.9%
-  bear/high_vol              13.1%
-  range/low_vol              12.6%
-  bull/high_vol               8.4%
-  range/high_vol              2.8%
+  bull/low_vol               40.0%
+  bear/low_vol               22.6%
+  bear/high_vol              13.4%
+  range/low_vol              12.8%
+  bull/high_vol               8.6%
+  range/high_vol              2.6%
 ------------------------------------------------------------------------
 
 >> ma_crossover ù top 3 of 20 variants:
-   params={'fast': 5, 'slow': 50}  score=0.811  wr=25.00%  PF=0.46  Sharpe=-4.65  MDD=35.40%  trades=148  regimes=0/2
+   params={'fast': 5, 'slow': 50}  score=0.804  wr=25.68%  PF=0.47  Sharpe=-4.51  MDD=35.40%  trades=148  regimes=0/2
      flags: regime_failure
-   params={'fast': 30, 'slow': 50}  score=0.678  wr=32.33%  PF=0.70  Sharpe=-2.07  MDD=26.48%  trades=133  regimes=1/2
+   params={'fast': 30, 'slow': 50}  score=0.667  wr=32.58%  PF=0.71  Sharpe=-2.01  MDD=26.48%  trades=132  regimes=0/2
      flags: regime_failure
-   params={'fast': 50, 'slow': 200}  score=0.630  wr=20.00%  PF=0.53  Sharpe=-3.68  MDD=22.67%  trades=70  regimes=1/1
+   params={'fast': 50, 'slow': 200}  score=0.652  wr=21.13%  PF=0.53  Sharpe=-3.69  MDD=22.97%  trades=71  regimes=1/1
 
 >> donchian_breakout ù top 3 of 15 variants:
-   params={'lookback': 10, 'exit_lookback': 5}  score=0.797  wr=35.53%  PF=0.79  Sharpe=-1.29  MDD=24.29%  trades=152  regimes=0/2
+   params={'lookback': 10, 'exit_lookback': 5}  score=0.829  wr=35.53%  PF=0.80  Sharpe=-1.27  MDD=24.29%  trades=152  regimes=0/2
      flags: regime_failure
-   params={'lookback': 10, 'exit_lookback': 10}  score=0.547  wr=28.70%  PF=0.60  Sharpe=-3.15  MDD=29.63%  trades=115  regimes=0/2
+   params={'lookback': 20, 'exit_lookback': 5}  score=0.634  wr=36.94%  PF=0.91  Sharpe=-0.54  MDD=20.03%  trades=111  regimes=0/1
      flags: regime_failure
-   params={'lookback': 20, 'exit_lookback': 5}  score=0.532  wr=36.94%  PF=0.90  Sharpe=-0.58  MDD=20.03%  trades=111  regimes=0/1
+   params={'lookback': 10, 'exit_lookback': 10}  score=0.521  wr=28.70%  PF=0.60  Sharpe=-3.11  MDD=29.63%  trades=115  regimes=0/2
      flags: regime_failure
 
 >> rsi_mean_reverse ù top 3 of 64 variants:
-   params={'period': 14, 'oversold': 25, 'overbought': 70}  score=1.543  wr=57.63%  PF=1.42  Sharpe=2.57  MDD=5.12%  trades=59  regimes=1/1
-   params={'period': 14, 'oversold': 30, 'overbought': 70}  score=1.543  wr=57.32%  PF=1.36  Sharpe=2.25  MDD=6.36%  trades=82  regimes=1/1
-   params={'period': 14, 'oversold': 20, 'overbought': 70}  score=1.543  wr=54.00%  PF=1.21  Sharpe=1.35  MDD=5.14%  trades=50  regimes=1/1
+   params={'period': 14, 'oversold': 30, 'overbought': 70}  score=1.004  wr=58.02%  PF=1.40  Sharpe=2.44  MDD=6.36%  trades=81  regimes=1/2
+     flags: regime_failure
+   params={'period': 14, 'oversold': 30, 'overbought': 65}  score=0.843  wr=56.88%  PF=1.30  Sharpe=1.93  MDD=6.64%  trades=109  regimes=1/2
+     flags: regime_failure
+   params={'period': 7, 'oversold': 35, 'overbought': 80}  score=0.808  wr=60.20%  PF=1.00  Sharpe=0.03  MDD=6.78%  trades=196  regimes=3/4
+     flags: regime_failure
 
 >> regime_gated_rsi ù top 3 of 972 variants:
    params={'rsi_period': 14, 'oversold': 30, 'overbought': 70, 'trend_ma': 100, 'slope_window': 20, 'trend_threshold': 0.0005}  score=1.484  wr=65.26%  PF=1.08  Sharpe=0.47  MDD=2.92%  trades=95  regimes=2/3
@@ -616,81 +616,81 @@ Regime distribution:
      flags: regime_failure
 
 >> ts_momentum ù top 3 of 5 variants:
-   params={'lookback': 120}  score=0.758  wr=22.62%  PF=0.40  Sharpe=-5.58  MDD=37.98%  trades=168  regimes=1/3
+   params={'lookback': 20}  score=0.772  wr=29.76%  PF=0.61  Sharpe=-2.69  MDD=40.46%  trades=336  regimes=1/3
      flags: regime_failure
-   params={'lookback': 20}  score=0.752  wr=29.76%  PF=0.61  Sharpe=-2.70  MDD=40.46%  trades=336  regimes=1/3
+   params={'lookback': 120}  score=0.573  wr=22.81%  PF=0.39  Sharpe=-5.73  MDD=38.11%  trades=171  regimes=2/3
      flags: regime_failure
-   params={'lookback': 252}  score=0.549  wr=27.45%  PF=0.65  Sharpe=-2.24  MDD=21.71%  trades=102  regimes=1/1
+   params={'lookback': 200}  score=0.365  wr=28.87%  PF=0.57  Sharpe=-3.09  MDD=27.17%  trades=142  regimes=0/4
+     flags: regime_failure
 ------------------------------------------------------------------------
-OVERALL WINNER: rsi_mean_reverse {'period': 14, 'oversold': 25, 'overbought': 70}
-  win rate     : 57.63%  [42.37%, 72.88%]
-  profit factor: 1.424  [0.765, 2.842]
-  Sharpe (ann) : 0.539  [-0.168, 1.250]
-  Deflated SR p: 0.968
-  notes        : Profit factor lower CI is below 1 ù edge is not statistically established.
+OVERALL WINNER: regime_gated_rsi {'rsi_period': 14, 'oversold': 30, 'overbought': 70, 'trend_ma': 100, 'slope_window': 20, 'trend_threshold': 0.0005}
+  win rate     : 65.26%  [61.05%, 69.47%]
+  profit factor: 1.083  [0.780, 1.583]
+  Sharpe (ann) : 0.248  [-0.287, 0.849]
+  Deflated SR p: 0.138
+  notes        : Profit factor lower CI is below 1 ù edge is not statistically established. Deflated Sharpe probability < 0.95 ù likely overfit.
 ========================================================================
-2026-08-11 02:03:18,024 ERROR   run_portfolio                       :: Gate fail: PF_lo=0.765 <= 1.00
-2026-08-11 02:03:18,024 ERROR   run_portfolio                       :: Gate failed for NZD_JPY. Skipping this symbol.
-2026-08-11 02:03:18,024 INFO    run_portfolio                       :: Optimizing EUR_GBP with strategies=['ma_crossover', 'donchian_breakout', 'rsi_mean_reverse', 'regime_gated_rsi', 'ts_momentum'] ...
-2026-08-11 02:03:18,024 INFO    oandapyV20.oandapyV20               :: performing request https://api-fxpractice.oanda.com/v3/instruments/EUR_GBP/candles
-2026-08-11 02:03:37,068 INFO    run_portfolio                       :: Optimization complete for EUR_GBP
+2026-08-12 02:03:42,563 ERROR   run_portfolio                       :: Gate fail: PF_lo=0.780 <= 1.00
+2026-08-12 02:03:42,563 ERROR   run_portfolio                       :: Gate failed for NZD_JPY. Skipping this symbol.
+2026-08-12 02:03:42,563 INFO    run_portfolio                       :: Optimizing EUR_GBP with strategies=['ma_crossover', 'donchian_breakout', 'rsi_mean_reverse', 'regime_gated_rsi', 'ts_momentum'] ...
+2026-08-12 02:03:42,563 INFO    oandapyV20.oandapyV20               :: performing request https://api-fxpractice.oanda.com/v3/instruments/EUR_GBP/candles
+2026-08-12 02:04:03,804 INFO    run_portfolio                       :: Optimization complete for EUR_GBP
 ========================================================================
 OPTIMIZATION REPORT ù EUR_GBP 4h  (fx)
 Bars analysed: 2999
 ------------------------------------------------------------------------
 Regime distribution:
-  bear/low_vol               25.5%
-  bull/low_vol               23.3%
-  range/low_vol              19.6%
-  bull/high_vol              14.8%
-  bear/high_vol              12.5%
-  range/high_vol              4.3%
+  bear/low_vol               25.8%
+  bull/low_vol               23.4%
+  range/low_vol              19.8%
+  bull/high_vol              14.7%
+  bear/high_vol              12.2%
+  range/high_vol              4.1%
 ------------------------------------------------------------------------
 
 >> ma_crossover ù top 3 of 20 variants:
-   params={'fast': 30, 'slow': 50}  score=0.384  wr=36.51%  PF=0.67  Sharpe=-2.70  MDD=21.27%  trades=126  regimes=0/2
+   params={'fast': 5, 'slow': 50}  score=0.498  wr=27.70%  PF=0.58  Sharpe=-3.41  MDD=27.71%  trades=148  regimes=0/3
      flags: regime_failure
-   params={'fast': 10, 'slow': 50}  score=0.368  wr=31.97%  PF=0.60  Sharpe=-3.35  MDD=27.00%  trades=122  regimes=1/3
+   params={'fast': 10, 'slow': 50}  score=0.442  wr=32.23%  PF=0.61  Sharpe=-3.20  MDD=27.00%  trades=121  regimes=1/3
      flags: regime_failure
-   params={'fast': 5, 'slow': 200}  score=0.331  wr=14.14%  PF=0.28  Sharpe=-7.14  MDD=36.20%  trades=99  regimes=0/1
+   params={'fast': 20, 'slow': 50}  score=0.423  wr=31.67%  PF=0.59  Sharpe=-3.21  MDD=26.32%  trades=120  regimes=0/2
      flags: regime_failure
 
 >> donchian_breakout ù top 3 of 15 variants:
-   params={'lookback': 10, 'exit_lookback': 10}  score=0.486  wr=29.63%  PF=0.75  Sharpe=-1.76  MDD=17.20%  trades=108  regimes=0/2
+   params={'lookback': 10, 'exit_lookback': 10}  score=0.530  wr=30.28%  PF=0.76  Sharpe=-1.67  MDD=16.78%  trades=109  regimes=0/2
      flags: regime_failure
-   params={'lookback': 10, 'exit_lookback': 5}  score=0.398  wr=28.28%  PF=0.55  Sharpe=-3.87  MDD=27.04%  trades=145  regimes=1/3
+   params={'lookback': 10, 'exit_lookback': 5}  score=0.414  wr=28.97%  PF=0.56  Sharpe=-3.73  MDD=26.41%  trades=145  regimes=1/3
      flags: regime_failure
-   params={'lookback': 10, 'exit_lookback': 20}  score=0.000  wr=27.85%  PF=0.56  Sharpe=-3.85  MDD=20.43%  trades=79  regimes=0/0
+   params={'lookback': 10, 'exit_lookback': 20}  score=0.000  wr=27.50%  PF=0.56  Sharpe=-3.85  MDD=20.14%  trades=80  regimes=0/0
 
 >> rsi_mean_reverse ù top 3 of 64 variants:
-   params={'period': 7, 'oversold': 30, 'overbought': 75}  score=1.150  wr=60.33%  PF=1.06  Sharpe=0.43  MDD=9.24%  trades=184  regimes=2/3
+   params={'period': 7, 'oversold': 30, 'overbought': 75}  score=1.101  wr=60.96%  PF=1.08  Sharpe=0.56  MDD=9.24%  trades=187  regimes=2/3
      flags: regime_failure
-   params={'period': 7, 'oversold': 25, 'overbought': 75}  score=1.072  wr=61.49%  PF=1.09  Sharpe=0.60  MDD=8.86%  trades=148  regimes=2/3
+   params={'period': 7, 'oversold': 25, 'overbought': 75}  score=1.009  wr=62.67%  PF=1.14  Sharpe=0.90  MDD=8.86%  trades=150  regimes=2/3
      flags: regime_failure
-   params={'period': 7, 'oversold': 20, 'overbought': 75}  score=1.006  wr=60.34%  PF=1.09  Sharpe=0.62  MDD=6.30%  trades=116  regimes=2/3
-     flags: regime_failure
+   params={'period': 7, 'oversold': 20, 'overbought': 75}  score=0.978  wr=61.86%  PF=1.15  Sharpe=0.99  MDD=6.30%  trades=118  regimes=3/3
 
 >> regime_gated_rsi ù top 3 of 972 variants:
-   params={'rsi_period': 7, 'oversold': 30, 'overbought': 75, 'trend_ma': 200, 'slope_window': 40, 'trend_threshold': 0.005}  score=2.079  wr=58.23%  PF=0.80  Sharpe=-1.27  MDD=8.64%  trades=237  regimes=2/2
-   params={'rsi_period': 7, 'oversold': 30, 'overbought': 75, 'trend_ma': 200, 'slope_window': 40, 'trend_threshold': 0.002}  score=2.079  wr=58.23%  PF=0.80  Sharpe=-1.27  MDD=8.64%  trades=237  regimes=2/2
-   params={'rsi_period': 7, 'oversold': 30, 'overbought': 75, 'trend_ma': 200, 'slope_window': 40, 'trend_threshold': 0.001}  score=2.079  wr=58.23%  PF=0.80  Sharpe=-1.27  MDD=8.64%  trades=237  regimes=2/2
+   params={'rsi_period': 7, 'oversold': 30, 'overbought': 75, 'trend_ma': 200, 'slope_window': 40, 'trend_threshold': 0.005}  score=1.583  wr=57.98%  PF=0.79  Sharpe=-1.37  MDD=8.64%  trades=238  regimes=2/2
+   params={'rsi_period': 7, 'oversold': 30, 'overbought': 75, 'trend_ma': 200, 'slope_window': 40, 'trend_threshold': 0.002}  score=1.583  wr=57.98%  PF=0.79  Sharpe=-1.37  MDD=8.64%  trades=238  regimes=2/2
+   params={'rsi_period': 7, 'oversold': 30, 'overbought': 75, 'trend_ma': 200, 'slope_window': 40, 'trend_threshold': 0.001}  score=1.583  wr=57.98%  PF=0.79  Sharpe=-1.37  MDD=8.64%  trades=238  regimes=2/2
 
 >> ts_momentum ù top 3 of 5 variants:
-   params={'lookback': 20}  score=0.583  wr=26.67%  PF=0.59  Sharpe=-2.85  MDD=31.69%  trades=300  regimes=1/4
+   params={'lookback': 20}  score=0.592  wr=26.67%  PF=0.59  Sharpe=-2.83  MDD=31.77%  trades=300  regimes=1/4
      flags: regime_failure
-   params={'lookback': 60}  score=0.403  wr=25.14%  PF=0.56  Sharpe=-3.23  MDD=26.71%  trades=183  regimes=1/4
+   params={'lookback': 60}  score=0.468  wr=25.68%  PF=0.56  Sharpe=-3.21  MDD=26.71%  trades=183  regimes=1/4
      flags: regime_failure
-   params={'lookback': 200}  score=0.312  wr=23.85%  PF=0.34  Sharpe=-6.40  MDD=36.52%  trades=130  regimes=0/2
+   params={'lookback': 200}  score=0.324  wr=23.85%  PF=0.35  Sharpe=-6.34  MDD=36.45%  trades=130  regimes=0/2
      flags: regime_failure
 ------------------------------------------------------------------------
 OVERALL WINNER: regime_gated_rsi {'rsi_period': 7, 'oversold': 30, 'overbought': 75, 'trend_ma': 200, 'slope_window': 40, 'trend_threshold': 0.005}
-  win rate     : 58.23%  [52.32%, 64.56%]
-  profit factor: 0.800  [0.590, 1.094]
-  Sharpe (ann) : -0.004  [-0.690, 0.698]
+  win rate     : 57.98%  [52.10%, 64.29%]
+  profit factor: 0.786  [0.595, 1.042]
+  Sharpe (ann) : -0.047  [-0.659, 0.665]
   Deflated SR p: 0.000
   notes        : Profit factor lower CI is below 1 ù edge is not statistically established. Deflated Sharpe probability < 0.95 ù likely overfit.
 ========================================================================
-2026-08-11 02:03:37,185 ERROR   run_portfolio                       :: Gate fail: PF_lo=0.590 <= 1.00
-2026-08-11 02:03:37,185 ERROR   run_portfolio                       :: Gate failed for EUR_GBP. Skipping this symbol.
-2026-08-11 02:03:37,186 INFO    run_portfolio                       :: Saved 0 winners to ./discovery_fx_4h_state\winners.json
-2026-08-11 02:03:37,187 ERROR   run_portfolio                       :: No winning strategies found for any symbol. Aborting.
+2026-08-12 02:04:03,893 ERROR   run_portfolio                       :: Gate fail: PF_lo=0.595 <= 1.00
+2026-08-12 02:04:03,893 ERROR   run_portfolio                       :: Gate failed for EUR_GBP. Skipping this symbol.
+2026-08-12 02:04:03,894 INFO    run_portfolio                       :: Saved 1 winners to ./discovery_fx_4h_state\winners.json
+2026-08-12 02:04:03,894 INFO    run_portfolio                       :: --dry-run: exiting before portfolio start
