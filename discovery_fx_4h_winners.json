@@ -1,4 +1,33 @@
 {
+  "USD_JPY": {
+    "strategy": "rsi_mean_reverse",
+    "params": {
+      "period": 14,
+      "oversold": 35,
+      "overbought": 70
+    },
+    "score": 1.620712097398627,
+    "validation": {
+      "win_rate": {
+        "point": 0.5789473684210527,
+        "lo": 0.5,
+        "hi": 0.6578947368421053
+      },
+      "profit_factor": {
+        "point": 1.4450859361448192,
+        "lo": 1.0676904614673586,
+        "hi": 1.9602656731003785
+      },
+      "sharpe": {
+        "point": 0.773013646295568,
+        "lo": 0.043885761443228685,
+        "hi": 1.4578856914660354
+      },
+      "dsr_prob": 0.9999999939815083,
+      "pbo": null,
+      "notes": "All checks passed."
+    }
+  },
   "AUD_USD": {
     "strategy": "regime_gated_rsi",
     "params": {
@@ -6,27 +35,85 @@
       "oversold": 25,
       "overbought": 80,
       "trend_ma": 100,
-      "slope_window": 40,
-      "trend_threshold": 0.005
+      "slope_window": 10,
+      "trend_threshold": 0.0005
     },
-    "score": 3.613858016720799,
+    "score": 3.6764584610440005,
     "validation": {
       "win_rate": {
-        "point": 0.6949152542372882,
-        "lo": 0.6016949152542372,
-        "hi": 0.7966101694915254
+        "point": 0.6859504132231405,
+        "lo": 0.5950413223140496,
+        "hi": 0.768595041322314
       },
       "profit_factor": {
-        "point": 1.5589925980233257,
-        "lo": 1.012871691731967,
-        "hi": 2.7962368924721757
+        "point": 1.4966091378449078,
+        "lo": 1.0167626942993329,
+        "hi": 2.529160509714505
       },
       "sharpe": {
-        "point": 0.8422528048028335,
-        "lo": 0.1078183726907041,
-        "hi": 1.591216730205013
+        "point": 0.7804080133096696,
+        "lo": 0.09325138215432131,
+        "hi": 1.578000847945654
       },
-      "dsr_prob": 0.99444866664632,
+      "dsr_prob": 0.9913129019215986,
+      "pbo": null,
+      "notes": "All checks passed."
+    }
+  },
+  "EUR_JPY": {
+    "strategy": "rsi_mean_reverse",
+    "params": {
+      "period": 14,
+      "oversold": 30,
+      "overbought": 70
+    },
+    "score": 1.0004069137518965,
+    "validation": {
+      "win_rate": {
+        "point": 0.5714285714285714,
+        "lo": 0.5064935064935064,
+        "hi": 0.6493506493506493
+      },
+      "profit_factor": {
+        "point": 1.3688283333366902,
+        "lo": 1.0465054424526319,
+        "hi": 1.7688420137332734
+      },
+      "sharpe": {
+        "point": 0.5009073599373246,
+        "lo": -0.1294515500937071,
+        "hi": 1.091045707082787
+      },
+      "dsr_prob": 0.9962978616378544,
+      "pbo": null,
+      "notes": "All checks passed."
+    }
+  },
+  "GBP_JPY": {
+    "strategy": "rsi_mean_reverse",
+    "params": {
+      "period": 14,
+      "oversold": 30,
+      "overbought": 65
+    },
+    "score": 1.0464574725580411,
+    "validation": {
+      "win_rate": {
+        "point": 0.5575221238938053,
+        "lo": 0.49557522123893805,
+        "hi": 0.6194690265486725
+      },
+      "profit_factor": {
+        "point": 1.24852776006965,
+        "lo": 1.0261956030114072,
+        "hi": 1.528266151890127
+      },
+      "sharpe": {
+        "point": 0.5266090831388832,
+        "lo": -0.12193222514922548,
+        "hi": 1.1955791386540222
+      },
+      "dsr_prob": 0.9990296143555756,
       "pbo": null,
       "notes": "All checks passed."
     }
