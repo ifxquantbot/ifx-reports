@@ -1,0 +1,351 @@
+{
+  "symbol": "AUD_JPY",
+  "strategy_name": "rsi_mean_reverse",
+  "params": {
+    "period": 14,
+    "oversold": 35,
+    "overbought": 75
+  },
+  "last_bar_ts": "2026-08-14T17:00:00+00:00",
+  "position_qty": 0.0,
+  "position_avg_price": 0.0,
+  "realized_pnl": 0.0,
+  "equity_start": 5000,
+  "equity_current": 5000,
+  "n_fills": 35,
+  "started_at": "2026-07-17T21:37:43.567965+00:00",
+  "updated_at": "2026-08-16T23:21:03.683946+00:00",
+  "fills": [
+    {
+      "ts": "2026-07-17T17:00:00+00:00",
+      "price": 113.385,
+      "signal": -1,
+      "position": -51.736567347193265,
+      "equity": 4999.2374133160065,
+      "prev_position": 0.0,
+      "action": "reconciled"
+    },
+    {
+      "ts": "2026-07-17T17:00:00+00:00",
+      "price": 113.385,
+      "signal": -1,
+      "position": -51.736567347193265,
+      "equity": 4999.2374133160065,
+      "prev_position": 0.0,
+      "action": "reconciled"
+    },
+    {
+      "ts": "2026-07-17T17:00:00+00:00",
+      "price": 113.385,
+      "signal": -1,
+      "position": -51.736567347193265,
+      "equity": 4999.2374133160065,
+      "prev_position": 0.0,
+      "action": "reconciled"
+    },
+    {
+      "ts": "2026-07-17T17:00:00+00:00",
+      "price": 113.385,
+      "signal": -1,
+      "position": -51.736567347193265,
+      "equity": 4999.2374133160065,
+      "prev_position": 0.0,
+      "action": "reconciled"
+    },
+    {
+      "ts": "2026-07-20T13:00:00+00:00",
+      "price": 113.822,
+      "signal": -1,
+      "position": 0.0,
+      "equity": 4975.862981686095,
+      "prev_position": -51.736567347193265,
+      "stop_hit": true,
+      "action": "reconciled"
+    },
+    {
+      "ts": "2026-07-20T13:00:00+00:00",
+      "price": 113.822,
+      "signal": -1,
+      "position": -50.11453006631729,
+      "equity": 4975.121456549838,
+      "prev_position": 0.0,
+      "action": "reconciled"
+    },
+    {
+      "ts": "2026-07-21T21:00:00+00:00",
+      "price": 114.342,
+      "signal": -1,
+      "position": 0.0,
+      "equity": 4950.617415435009,
+      "prev_position": -50.11453006631729,
+      "stop_hit": true,
+      "action": "reconciled"
+    },
+    {
+      "ts": "2026-07-21T21:00:00+00:00",
+      "price": 114.342,
+      "signal": -1,
+      "position": -52.87854395472903,
+      "equity": 4949.83141773526,
+      "prev_position": 0.0,
+      "action": "reconciled"
+    },
+    {
+      "ts": "2026-07-28T05:00:00+00:00",
+      "price": 114.243,
+      "signal": 0,
+      "position": 0.0,
+      "equity": 4911.338869012965,
+      "prev_position": -52.87854395472903,
+      "action": "reconciled"
+    },
+    {
+      "ts": "2026-07-30T17:00:00+00:00",
+      "price": 112.153,
+      "signal": 1,
+      "position": 26.156552199691916,
+      "equity": 4999.618633892371,
+      "prev_position": 0.0,
+      "action": "reconciled"
+    },
+    {
+      "ts": "2026-07-30T17:00:00+00:00",
+      "price": 112.153,
+      "signal": 1,
+      "position": 0.0,
+      "equity": 4998.84995159775,
+      "prev_position": 26.156552199691916,
+      "stop_hit": true,
+      "action": "reconciled"
+    },
+    {
+      "ts": "2026-07-30T17:00:00+00:00",
+      "price": 112.153,
+      "signal": 1,
+      "position": 26.148509769322015,
+      "equity": 4998.081386764685,
+      "prev_position": 0.0,
+      "action": "reconciled"
+    },
+    {
+      "ts": "2026-07-30T17:00:00+00:00",
+      "price": 112.153,
+      "signal": 1,
+      "position": 0.0,
+      "equity": 4997.312940819021,
+      "prev_position": 26.148509769322015,
+      "stop_hit": true,
+      "action": "reconciled"
+    },
+    {
+      "ts": "2026-07-30T21:00:00+00:00",
+      "price": 112.851,
+      "signal": 1,
+      "position": 24.59949723668135,
+      "equity": 4996.564847693494,
+      "prev_position": 0.0,
+      "action": "reconciled"
+    },
+    {
+      "ts": "2026-07-30T21:00:00+00:00",
+      "price": 112.851,
+      "signal": 1,
+      "position": 0.0,
+      "equity": 4995.83996341278,
+      "prev_position": 24.59949723668135,
+      "stop_hit": true,
+      "action": "reconciled"
+    },
+    {
+      "ts": "2026-07-30T21:00:00+00:00",
+      "price": 112.851,
+      "signal": 1,
+      "position": 24.592360133397463,
+      "equity": 4995.1151839446975,
+      "prev_position": 0.0,
+      "action": "reconciled"
+    },
+    {
+      "ts": "2026-07-30T21:00:00+00:00",
+      "price": 112.851,
+      "signal": 1,
+      "position": 0.0,
+      "equity": 4994.390509976168,
+      "prev_position": 24.592360133397463,
+      "stop_hit": true,
+      "action": "reconciled"
+    },
+    {
+      "ts": "2026-07-30T21:00:00+00:00",
+      "price": 112.851,
+      "signal": 1,
+      "position": 24.585225100816185,
+      "equity": 4993.665940789859,
+      "prev_position": 0.0,
+      "action": "reconciled"
+    },
+    {
+      "ts": "2026-07-30T21:00:00+00:00",
+      "price": 112.851,
+      "signal": 1,
+      "position": 0.0,
+      "equity": 4992.941477072493,
+      "prev_position": 24.585225100816185,
+      "stop_hit": true,
+      "action": "reconciled"
+    },
+    {
+      "ts": "2026-07-30T21:00:00+00:00",
+      "price": 112.851,
+      "signal": 1,
+      "position": 24.578092138336753,
+      "equity": 4992.21711810695,
+      "prev_position": 0.0,
+      "action": "reconciled"
+    },
+    {
+      "ts": "2026-07-30T21:00:00+00:00",
+      "price": 112.851,
+      "signal": 1,
+      "position": 0.0,
+      "equity": 4991.129193355441,
+      "prev_position": 24.578092138336753,
+      "stop_hit": true,
+      "action": "reconciled"
+    },
+    {
+      "ts": "2026-07-30T21:00:00+00:00",
+      "price": 112.851,
+      "signal": 1,
+      "position": 24.57096124535856,
+      "equity": 4990.768715773979,
+      "prev_position": 0.0,
+      "action": "reconciled"
+    },
+    {
+      "ts": "2026-07-30T21:00:00+00:00",
+      "price": 112.851,
+      "signal": 1,
+      "position": 0.0,
+      "equity": 4990.0446723759605,
+      "prev_position": 24.57096124535856,
+      "stop_hit": true,
+      "action": "reconciled"
+    },
+    {
+      "ts": "2026-07-30T21:00:00+00:00",
+      "price": 112.851,
+      "signal": 1,
+      "position": 24.563832421281163,
+      "equity": 4989.320733668988,
+      "prev_position": 0.0,
+      "action": "reconciled"
+    },
+    {
+      "ts": "2026-07-30T21:00:00+00:00",
+      "price": 112.851,
+      "signal": 1,
+      "position": 0.0,
+      "equity": 4988.233440109642,
+      "prev_position": 24.563832421281163,
+      "stop_hit": true,
+      "action": "reconciled"
+    },
+    {
+      "ts": "2026-07-30T21:00:00+00:00",
+      "price": 112.851,
+      "signal": 1,
+      "position": 24.554916706956746,
+      "equity": 4987.509804593615,
+      "prev_position": 0.0,
+      "action": "reconciled"
+    },
+    {
+      "ts": "2026-07-30T21:00:00+00:00",
+      "price": 112.851,
+      "signal": 1,
+      "position": 0.0,
+      "equity": 4986.786193569452,
+      "prev_position": 24.554916706956746,
+      "stop_hit": true,
+      "action": "reconciled"
+    },
+    {
+      "ts": "2026-07-30T21:00:00+00:00",
+      "price": 112.851,
+      "signal": 1,
+      "position": 24.547792537914646,
+      "equity": 4986.062768003301,
+      "prev_position": 0.0,
+      "action": "reconciled"
+    },
+    {
+      "ts": "2026-07-30T21:00:00+00:00",
+      "price": 112.851,
+      "signal": 1,
+      "position": 0.0,
+      "equity": 4985.3393669219095,
+      "prev_position": 24.547792537914646,
+      "stop_hit": true,
+      "action": "reconciled"
+    },
+    {
+      "ts": "2026-07-31T01:00:00+00:00",
+      "price": 112.908,
+      "signal": 1,
+      "position": 23.20994208970557,
+      "equity": 4984.998684698225,
+      "prev_position": 0.0,
+      "action": "reconciled"
+    },
+    {
+      "ts": "2026-07-31T09:00:00+00:00",
+      "price": 112.448,
+      "signal": 1,
+      "position": 0.0,
+      "equity": 4968.245111851647,
+      "prev_position": 23.20994208970557,
+      "stop_hit": true,
+      "action": "reconciled"
+    },
+    {
+      "ts": "2026-07-31T09:00:00+00:00",
+      "price": 112.448,
+      "signal": 1,
+      "position": 21.51018531614777,
+      "equity": 4967.930665478941,
+      "prev_position": 0.0,
+      "action": "reconciled"
+    },
+    {
+      "ts": "2026-07-31T17:00:00+00:00",
+      "price": 110.638,
+      "signal": 1,
+      "position": 0.0,
+      "equity": 4882.928989280673,
+      "prev_position": 21.51018531614777,
+      "stop_hit": true,
+      "action": "reconciled"
+    },
+    {
+      "ts": "2026-07-31T17:00:00+00:00",
+      "price": 110.638,
+      "signal": 1,
+      "position": 18.669481030477797,
+      "equity": 4882.660462710961,
+      "prev_position": 0.0,
+      "action": "reconciled"
+    },
+    {
+      "ts": "2026-08-03T05:00:00+00:00",
+      "price": 110.038,
+      "signal": 1,
+      "position": 15.821269136538003,
+      "equity": 4999.773673864208,
+      "prev_position": 0.0,
+      "action": "reconciled"
+    }
+  ],
+  "errors": [],
+  "keep_last": 500
+}
