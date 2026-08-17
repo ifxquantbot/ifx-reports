@@ -1,0 +1,9 @@
+{
+  "equity": 5000,
+  "positions": {},
+  "last_price": {
+    "AUD_JPY": 112.783,
+    "USD_JPY": 159.02
+  },
+  "realized_pnl": {}
+}
