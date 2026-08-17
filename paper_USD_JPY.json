@@ -6,7 +6,7 @@
     "oversold": 35,
     "overbought": 70
   },
-  "last_bar_ts": "2026-08-16T21:00:00+00:00",
+  "last_bar_ts": "2026-08-17T09:00:00+00:00",
   "position_qty": 0.0,
   "position_avg_price": 0.0,
   "realized_pnl": 0.0,
@@ -14,7 +14,7 @@
   "equity_current": 5000,
   "n_fills": 43,
   "started_at": "2026-07-18T03:42:05.573897+00:00",
-  "updated_at": "2026-08-17T03:21:34.674225+00:00",
+  "updated_at": "2026-08-17T16:23:08.060350+00:00",
   "fills": [
     {
       "ts": "2026-07-21T17:00:00+00:00",
