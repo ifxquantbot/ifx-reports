@@ -6,15 +6,15 @@
     "oversold": 35,
     "overbought": 75
   },
-  "last_bar_ts": "2026-08-17T09:00:00+00:00",
-  "position_qty": 0.0,
+  "last_bar_ts": "2026-08-18T09:00:00+00:00",
+  "position_qty": -53.30692226142991,
   "position_avg_price": 0.0,
   "realized_pnl": 0.0,
   "equity_start": 5000,
-  "equity_current": 5000,
-  "n_fills": 35,
+  "equity_current": 4988.446594000746,
+  "n_fills": 36,
   "started_at": "2026-07-17T21:37:43.567965+00:00",
-  "updated_at": "2026-08-17T16:23:07.687669+00:00",
+  "updated_at": "2026-08-18T16:26:27.056690+00:00",
   "fills": [
     {
       "ts": "2026-07-17T17:00:00+00:00",
@@ -342,6 +342,15 @@
       "signal": 1,
       "position": 15.821269136538003,
       "equity": 4999.773673864208,
+      "prev_position": 0.0,
+      "action": "reconciled"
+    },
+    {
+      "ts": "2026-08-17T13:00:00+00:00",
+      "price": 113.338,
+      "signal": -1,
+      "position": -53.30692226142991,
+      "equity": 4999.214592297556,
       "prev_position": 0.0,
       "action": "reconciled"
     }
