@@ -1,119 +1,58 @@
 {
-  "USD_JPY": {
-    "strategy": "rsi_mean_reverse",
-    "params": {
-      "period": 14,
-      "oversold": 20,
-      "overbought": 70
-    },
-    "score": 1.4777553227276674,
-    "validation": {
-      "win_rate": {
-        "point": 0.5294117647058824,
-        "lo": 0.4411764705882353,
-        "hi": 0.6176470588235294
-      },
-      "profit_factor": {
-        "point": 1.3587965919437621,
-        "lo": 1.0171097950451924,
-        "hi": 1.8434006001024017
-      },
-      "sharpe": {
-        "point": 0.34091485276420896,
-        "lo": -0.19791966892123328,
-        "hi": 0.8444360822656939
-      },
-      "dsr_prob": 0.7361159027714737,
-      "pbo": null,
-      "notes": "Deflated Sharpe probability < 0.95 \u2014 likely overfit."
-    }
-  },
-  "AUD_USD": {
-    "strategy": "regime_gated_rsi",
-    "params": {
-      "rsi_period": 7,
-      "oversold": 25,
-      "overbought": 80,
-      "trend_ma": 100,
-      "slope_window": 20,
-      "trend_threshold": 0.005
-    },
-    "score": 2.779460639295527,
-    "validation": {
-      "win_rate": {
-        "point": 0.6864406779661016,
-        "lo": 0.5932203389830508,
-        "hi": 0.788135593220339
-      },
-      "profit_factor": {
-        "point": 1.5163398750897885,
-        "lo": 1.0078481471560201,
-        "hi": 2.690688515869607
-      },
-      "sharpe": {
-        "point": 0.43533896158654417,
-        "lo": -0.05160091913888437,
-        "hi": 0.9732817228728231
-      },
-      "dsr_prob": 0.6918086730944593,
-      "pbo": null,
-      "notes": "Deflated Sharpe probability < 0.95 \u2014 likely overfit."
-    }
-  },
-  "EUR_JPY": {
-    "strategy": "rsi_mean_reverse",
-    "params": {
-      "period": 14,
-      "oversold": 35,
-      "overbought": 70
-    },
-    "score": 0.9402302161923021,
-    "validation": {
-      "win_rate": {
-        "point": 0.594059405940594,
-        "lo": 0.504950495049505,
-        "hi": 0.6831683168316832
-      },
-      "profit_factor": {
-        "point": 1.4371074334056673,
-        "lo": 1.0642385336757525,
-        "hi": 2.013114914367311
-      },
-      "sharpe": {
-        "point": 0.4380788512199881,
-        "lo": 0.008437017413250196,
-        "hi": 0.8338860422730093
-      },
-      "dsr_prob": 0.9943995418263728,
-      "pbo": null,
-      "notes": "All checks passed."
-    }
-  },
   "GBP_JPY": {
     "strategy": "rsi_mean_reverse",
     "params": {
       "period": 14,
-      "oversold": 35,
-      "overbought": 70
+      "oversold": 30,
+      "overbought": 65
     },
-    "score": 1.0533943934061107,
+    "score": 1.565267582653115,
     "validation": {
       "win_rate": {
-        "point": 0.6122448979591837,
-        "lo": 0.5303571428571429,
-        "hi": 0.6836734693877551
+        "point": 0.5614035087719298,
+        "lo": 0.5087719298245614,
+        "hi": 0.6140350877192983
       },
       "profit_factor": {
-        "point": 1.5805703743812538,
-        "lo": 1.220360674368726,
-        "hi": 2.2882137361749
+        "point": 1.258556698328231,
+        "lo": 1.0370424045211095,
+        "hi": 1.5764796774635326
       },
       "sharpe": {
-        "point": 0.6021704171207484,
-        "lo": 0.09600441834131707,
-        "hi": 1.1561054551090792
+        "point": 0.3387114305619602,
+        "lo": -0.13479153460319215,
+        "hi": 0.8267451567721326
       },
-      "dsr_prob": 0.9991826781444284,
+      "dsr_prob": 0.8823894555563405,
+      "pbo": null,
+      "notes": "Deflated Sharpe probability < 0.95 \u2014 likely overfit."
+    }
+  },
+  "NZD_JPY": {
+    "strategy": "rsi_mean_reverse",
+    "params": {
+      "period": 14,
+      "oversold": 30,
+      "overbought": 65
+    },
+    "score": 0.9329838259755412,
+    "validation": {
+      "win_rate": {
+        "point": 0.5871559633027523,
+        "lo": 0.5137614678899083,
+        "hi": 0.6605504587155964
+      },
+      "profit_factor": {
+        "point": 1.4715533345196288,
+        "lo": 1.0579910254272356,
+        "hi": 2.110187199609905
+      },
+      "sharpe": {
+        "point": 0.5680949192206944,
+        "lo": 0.05006158157226701,
+        "hi": 1.0577230551699026
+      },
+      "dsr_prob": 0.9999237044014415,
       "pbo": null,
       "notes": "All checks passed."
     }
