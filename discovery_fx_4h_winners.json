@@ -1,60 +1,34 @@
 {
-  "GBP_JPY": {
-    "strategy": "rsi_mean_reverse",
+  "AUD_USD": {
+    "strategy": "regime_gated_rsi",
     "params": {
-      "period": 14,
-      "oversold": 30,
-      "overbought": 65
+      "rsi_period": 7,
+      "oversold": 25,
+      "overbought": 80,
+      "trend_ma": 100,
+      "slope_window": 10,
+      "trend_threshold": 0.0005
     },
-    "score": 1.565267582653115,
+    "score": 3.249642157661667,
     "validation": {
       "win_rate": {
-        "point": 0.5614035087719298,
-        "lo": 0.5087719298245614,
-        "hi": 0.6140350877192983
+        "point": 0.6864406779661016,
+        "lo": 0.5932203389830508,
+        "hi": 0.7711864406779662
       },
       "profit_factor": {
-        "point": 1.258556698328231,
-        "lo": 1.0370424045211095,
-        "hi": 1.5764796774635326
+        "point": 1.523964683899315,
+        "lo": 1.025995184693122,
+        "hi": 2.5644524164592757
       },
       "sharpe": {
-        "point": 0.3387114305619602,
-        "lo": -0.13479153460319215,
-        "hi": 0.8267451567721326
+        "point": 0.44395127429244224,
+        "lo": -0.13169110033470033,
+        "hi": 0.93931486742188
       },
-      "dsr_prob": 0.8823894555563405,
+      "dsr_prob": 0.7121535623693599,
       "pbo": null,
       "notes": "Deflated Sharpe probability < 0.95 \u2014 likely overfit."
-    }
-  },
-  "NZD_JPY": {
-    "strategy": "rsi_mean_reverse",
-    "params": {
-      "period": 14,
-      "oversold": 30,
-      "overbought": 65
-    },
-    "score": 0.9329838259755412,
-    "validation": {
-      "win_rate": {
-        "point": 0.5871559633027523,
-        "lo": 0.5137614678899083,
-        "hi": 0.6605504587155964
-      },
-      "profit_factor": {
-        "point": 1.4715533345196288,
-        "lo": 1.0579910254272356,
-        "hi": 2.110187199609905
-      },
-      "sharpe": {
-        "point": 0.5680949192206944,
-        "lo": 0.05006158157226701,
-        "hi": 1.0577230551699026
-      },
-      "dsr_prob": 0.9999237044014415,
-      "pbo": null,
-      "notes": "All checks passed."
     }
   }
 }
