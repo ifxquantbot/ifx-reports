@@ -1,17 +1,17 @@
 {
-  "equity": 4939.959904672939,
+  "equity": 4931.899910770775,
   "positions": {
     "EUR_JPY": {
-      "qty": -39.99520241060619,
+      "qty": 0.0,
       "avg_price": 185.4096027
     }
   },
   "last_price": {
     "AUD_JPY": 112.783,
     "USD_JPY": 159.02,
-    "EUR_JPY": 185.842
+    "EUR_JPY": 185.606
   },
   "realized_pnl": {
-    "EUR_JPY": -60.040095327061486
+    "EUR_JPY": -68.10008922922512
   }
 }

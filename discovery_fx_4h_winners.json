@@ -1,34 +1,89 @@
 {
-  "AUD_USD": {
-    "strategy": "regime_gated_rsi",
+  "EUR_JPY": {
+    "strategy": "rsi_mean_reverse",
     "params": {
-      "rsi_period": 7,
-      "oversold": 25,
-      "overbought": 80,
-      "trend_ma": 100,
-      "slope_window": 10,
-      "trend_threshold": 0.0005
+      "period": 14,
+      "oversold": 35,
+      "overbought": 70
     },
-    "score": 3.249642157661667,
+    "score": 1.069659254810882,
     "validation": {
       "win_rate": {
-        "point": 0.6864406779661016,
-        "lo": 0.5932203389830508,
-        "hi": 0.7711864406779662
+        "point": 0.6161616161616161,
+        "lo": 0.5454545454545454,
+        "hi": 0.696969696969697
       },
       "profit_factor": {
-        "point": 1.523964683899315,
-        "lo": 1.025995184693122,
-        "hi": 2.5644524164592757
+        "point": 1.4773516374649291,
+        "lo": 1.0900530191060633,
+        "hi": 2.0752229217123768
       },
       "sharpe": {
-        "point": 0.44395127429244224,
-        "lo": -0.13169110033470033,
-        "hi": 0.93931486742188
+        "point": 0.46457848164053456,
+        "lo": 0.03962447494287371,
+        "hi": 0.896530187780562
       },
-      "dsr_prob": 0.7121535623693599,
+      "dsr_prob": 0.99604229110715,
       "pbo": null,
-      "notes": "Deflated Sharpe probability < 0.95 \u2014 likely overfit."
+      "notes": "All checks passed."
+    }
+  },
+  "GBP_JPY": {
+    "strategy": "rsi_mean_reverse",
+    "params": {
+      "period": 14,
+      "oversold": 30,
+      "overbought": 65
+    },
+    "score": 1.304174400838308,
+    "validation": {
+      "win_rate": {
+        "point": 0.5789473684210527,
+        "lo": 0.5263157894736842,
+        "hi": 0.631578947368421
+      },
+      "profit_factor": {
+        "point": 1.3035207702344207,
+        "lo": 1.0657604318904743,
+        "hi": 1.6164481736494891
+      },
+      "sharpe": {
+        "point": 0.39030940823574634,
+        "lo": -0.11204202290758745,
+        "hi": 0.8781441751966174
+      },
+      "dsr_prob": 0.9524915819882072,
+      "pbo": null,
+      "notes": "All checks passed."
+    }
+  },
+  "NZD_JPY": {
+    "strategy": "rsi_mean_reverse",
+    "params": {
+      "period": 14,
+      "oversold": 25,
+      "overbought": 65
+    },
+    "score": 1.40752754672351,
+    "validation": {
+      "win_rate": {
+        "point": 0.5977011494252874,
+        "lo": 0.5057471264367817,
+        "hi": 0.7011494252873564
+      },
+      "profit_factor": {
+        "point": 1.4545138073229442,
+        "lo": 1.0017268641985497,
+        "hi": 2.2812810787248017
+      },
+      "sharpe": {
+        "point": 0.48302246196778015,
+        "lo": -0.06507655156732556,
+        "hi": 1.0046276585690002
+      },
+      "dsr_prob": 0.9848820660439529,
+      "pbo": null,
+      "notes": "All checks passed."
     }
   }
 }
