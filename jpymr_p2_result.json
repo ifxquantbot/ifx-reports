@@ -1,0 +1,103 @@
+{
+  "generated_utc": "2026-08-27T12:20:55.191294+00:00",
+  "gate": "Gate-B (JPYMR_GATEB_PLAN.md)",
+  "frozen_params": {
+    "AUD_JPY": {
+      "period": 14,
+      "oversold": 35,
+      "overbought": 75
+    },
+    "USD_JPY": {
+      "period": 14,
+      "oversold": 35,
+      "overbought": 70
+    },
+    "EUR_JPY": {
+      "period": 14,
+      "oversold": 30,
+      "overbought": 70
+    },
+    "GBP_JPY": {
+      "period": 14,
+      "oversold": 30,
+      "overbought": 65
+    },
+    "NZD_JPY": {
+      "period": 14,
+      "oversold": 25,
+      "overbought": 65
+    }
+  },
+  "pooled": {
+    "n": 230,
+    "pf": 1.1026572587494763,
+    "pf_lo": 0.82368777273842,
+    "pf_hi": 1.4354822459696204,
+    "sharpe_ann": 0.7707334117199783,
+    "dsr": 1.0,
+    "max_dd": 0.10033863720038094
+  },
+  "b5_neighbour_pf": {
+    "oversold-5": 0.9966517595268397,
+    "oversold+5": 1.0517465398951433,
+    "overbought-5": 0.9628837414948452,
+    "overbought+5": 1.2431372395848925
+  },
+  "pbo": 0.0,
+  "b6": {
+    "max_share": 0.7381517376509992,
+    "best_symbol": "USD_JPY",
+    "pf_without_best": 1.0331107297516646,
+    "contrib_r": {
+      "AUD_JPY": -2.923540579021527,
+      "USD_JPY": 8.508288405404015,
+      "EUR_JPY": 2.619573943385536,
+      "GBP_JPY": 6.395526773167289,
+      "NZD_JPY": -3.073372384415768
+    }
+  },
+  "b7_regimes": {
+    "bear/high_vol": {
+      "share": 0.017,
+      "pf": 4.074825837736613
+    },
+    "bear/low_vol": {
+      "share": 0.122,
+      "pf": 0.9935828364944082
+    },
+    "bull/high_vol": {
+      "share": 0.143,
+      "pf": 0.9530203763845974
+    },
+    "bull/low_vol": {
+      "share": 0.635,
+      "pf": 1.1963677967215367
+    },
+    "range/high_vol": {
+      "share": 0.009,
+      "pf": 0.0
+    },
+    "range/low_vol": {
+      "share": 0.074,
+      "pf": 0.7593712071711999
+    }
+  },
+  "checks": {
+    "B1_n>=250": false,
+    "B2_pf>=1.15_lo>1.00": "False",
+    "B3_dsr>=0.95": true,
+    "B4_pbo<=0.35": true,
+    "B5_neighbours_pf>1": false,
+    "B6_concentration": false,
+    "B7_regime": true,
+    "B8_dd<=6pct": false
+  },
+  "verdict": "FAIL",
+  "per_symbol_n": {
+    "AUD_JPY": 41,
+    "USD_JPY": 50,
+    "EUR_JPY": 38,
+    "GBP_JPY": 53,
+    "NZD_JPY": 48
+  }
+}

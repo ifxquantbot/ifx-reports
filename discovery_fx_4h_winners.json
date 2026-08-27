@@ -1,63 +1,31 @@
 {
-  "AUD_USD": {
-    "strategy": "regime_gated_rsi",
-    "params": {
-      "rsi_period": 7,
-      "oversold": 25,
-      "overbought": 80,
-      "trend_ma": 100,
-      "slope_window": 10,
-      "trend_threshold": 0.0005
-    },
-    "score": 3.2496274610978304,
-    "validation": {
-      "win_rate": {
-        "point": 0.6837606837606838,
-        "lo": 0.5982905982905983,
-        "hi": 0.7692307692307693
-      },
-      "profit_factor": {
-        "point": 1.513600585900287,
-        "lo": 1.007764515995076,
-        "hi": 2.494730352078904
-      },
-      "sharpe": {
-        "point": 0.4353747983231342,
-        "lo": -0.09891014983695592,
-        "hi": 0.9341579922081621
-      },
-      "dsr_prob": 0.6902885415716329,
-      "pbo": 0.3333333333333333,
-      "notes": "Deflated Sharpe probability < 0.95 \u2014 likely overfit."
-    }
-  },
   "GBP_JPY": {
     "strategy": "rsi_mean_reverse",
     "params": {
       "period": 14,
       "oversold": 30,
-      "overbought": 65
+      "overbought": 70
     },
-    "score": 1.2712025133538378,
+    "score": 1.6955894565346705,
     "validation": {
       "win_rate": {
-        "point": 0.5663716814159292,
-        "lo": 0.5132743362831859,
-        "hi": 0.6194690265486725
+        "point": 0.6301369863013698,
+        "lo": 0.547945205479452,
+        "hi": 0.684931506849315
       },
       "profit_factor": {
-        "point": 1.235190520384796,
-        "lo": 1.0057597367528548,
-        "hi": 1.5066686139293823
+        "point": 1.7424104909767375,
+        "lo": 1.4022325957411592,
+        "hi": 2.13877568419868
       },
       "sharpe": {
-        "point": 0.3131946635324013,
-        "lo": -0.13489050373995076,
-        "hi": 0.8471092048026088
+        "point": 0.585595787458574,
+        "lo": 0.07863436556811461,
+        "hi": 1.0908083597299059
       },
-      "dsr_prob": 0.8133931681841132,
+      "dsr_prob": 0.9840800242408982,
       "pbo": 0.0,
-      "notes": "Deflated Sharpe probability < 0.95 \u2014 likely overfit."
+      "notes": "All checks passed."
     }
   }
 }

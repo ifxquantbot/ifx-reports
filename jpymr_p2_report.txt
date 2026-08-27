@@ -1,0 +1,18 @@
+JPY-MR-4H P2 RESULT  2026-08-27T12:20:55.191294+00:00
+============================================================
+pooled: n=230  PF=1.103 [0.824,1.435]  DSR=1.000  maxDD=10.03%
+PBO=0.0
+B5 {'oversold-5': 0.9966517595268397, 'oversold+5': 1.0517465398951433, 'overbought-5': 0.9628837414948452, 'overbought+5': 1.2431372395848925}
+B6 max_share=0.74 pf_wo_best=1.033
+B7 {'bear/high_vol': {'share': 0.017, 'pf': 4.074825837736613}, 'bear/low_vol': {'share': 0.122, 'pf': 0.9935828364944082}, 'bull/high_vol': {'share': 0.143, 'pf': 0.9530203763845974}, 'bull/low_vol': {'share': 0.635, 'pf': 1.1963677967215367}, 'range/high_vol': {'share': 0.009, 'pf': 0.0}, 'range/low_vol': {'share': 0.074, 'pf': 0.7593712071711999}}
+------------------------------------------------------------
+FAIL  B1_n>=250
+FAIL  B2_pf>=1.15_lo>1.00
+PASS  B3_dsr>=0.95
+PASS  B4_pbo<=0.35
+FAIL  B5_neighbours_pf>1
+FAIL  B6_concentration
+PASS  B7_regime
+FAIL  B8_dd<=6pct
+============================================================
+VERDICT: FAIL
